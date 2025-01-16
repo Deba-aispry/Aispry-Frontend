@@ -1,4 +1,4 @@
-export  const NavMenuItems = [
+export const NavMenuItems = [
   {
     label: "AI Solutions",
     submenu: [
@@ -20,6 +20,14 @@ export  const NavMenuItems = [
       { name: "Retail & E-commerce" },
       { name: "Financial Services" },
       { name: "ESG" },
+    ],
+  },
+  {
+    label: "How we work",
+    submenu: [
+      { name: "Our Process" },
+      { name: "Proof of Concept" },
+      { name: "From Data to Impact" },
     ],
   },
   {

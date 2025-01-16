@@ -17,7 +17,7 @@ const Navbar = () => {
 
   return (
     <nav className="bg-gradient-to-r from-[#ef8e38] to-[#108dc7] sticky top-0 z-20">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto  px-4 md:px-0">
         <div className="flex justify-between items-center py-6">
           <div className="flex-shrink-0">
             <img src={logo} alt="aiSpry-logo" className="h-full" />

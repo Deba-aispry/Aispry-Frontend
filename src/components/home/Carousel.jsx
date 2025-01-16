@@ -26,7 +26,7 @@ const CarouselComponent = () => {
   return (
     <div className="mt-16">
       <div>
-        <h1 className="text-2xl md:text-2xl text-red-500 font-semibold text-center">
+        <h1 className="text-2xl text-red-500 font-semibold text-center">
           Leading AI Transformation Across Verticals
         </h1>
         <p className="text-gray-600 py-4 text-start md:text-center mx-4">
@@ -34,7 +34,7 @@ const CarouselComponent = () => {
           solutions cater to diverse industries.
         </p>
       </div>
-      <div className="carousel-container my-12 w-3/4 mx-auto">
+      <div className="carousel-container my-12 max-w-6xl mx-auto">
         <Carousel
           responsive={responsive}
           infinite={true}
@@ -53,6 +53,7 @@ const CarouselComponent = () => {
                 src={card.image}
                 alt={card.heading}
                 className="card-image w-16 h-auto object-cover rounded-t-lg"
+                loading="lazy"
               />
               <div className="p-2 mt-4 h-40 overflow-hidden flex flex-col justify-between text-center">
                 <h3 className="card-heading text-xl font-semibold text-gray-800 mb-2">

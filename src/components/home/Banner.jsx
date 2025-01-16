@@ -15,7 +15,7 @@ const Banner = () => {
           lazy="true"
         />
 
-        <div className="absolute mt-5 md:mt-0 top-1/2 max-w-6xl px-4 md:px-0    transform -translate-y-1/2 text-white md:ml-52 flex flex-col text-left">
+        <div className="absolute mt-5 md:mt-0 top-1/2 max-w-6xl px-4 md:px-0 transform -translate-y-1/2 text-white md:ml-44 flex flex-col text-left">
           <h1 className="text-xl md:text-5xl font-semibold">
             Unleashing the Future with AI
           </h1>
@@ -77,7 +77,7 @@ const Banner = () => {
         </div>
       </div>
 
-      <section className=" max-w-6xl mx-auto py-4 px-8 rounded-lg shadow-lg my-8 bg-white">
+      <section className=" max-w-6xl mx-auto py-4 px-8 rounded-lg shadow-lg my-8 bg-white ">
         <div className="flex flex-col md:flex-row items-center justify-between md:space-x-4 space-y-8 md:space-y-0">
           {/* Mission Section */}
           <div className="flex items-center flex-col md:flex-row space-x-4 md:w-[45%] w-full">
