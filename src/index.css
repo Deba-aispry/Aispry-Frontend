@@ -2,6 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
-.custom-gradient {
-  background: "linear-gradient(90deg, #108dc7 0%, #ef8e38 100%)";
+.custom-bg {
+  position: relative;
+  overflow: hidden;
+}
+
+.wave-effect {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20%;
+  height: 20%;
+  background: rgba(138, 217, 248, 0.1);
+  border-radius: 50%;
+  animation: wave 3s ease-in-out infinite;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes wave {
+  0% {
+    width: 20%;
+    height: 20%;
+    background: rgba(138, 217, 248, 0.1);
+  }
+  50% {
+    width: 110%;
+    height: 110%;
+    background: rgba(138, 217, 248, 0.05);
+  }
+  100% {
+    width: 200%;
+    height: 200%;
+    background: rgba(138, 217, 248, 0);
+  }
 }

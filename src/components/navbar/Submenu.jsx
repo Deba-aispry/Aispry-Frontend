@@ -7,7 +7,7 @@ const Submenu = ({ items }) => {
         {items.map((item, index) => (
           <li
             key={index}
-            className="px-6 py-3 text-sm text-white cursor-pointer hover:text-md hover:scale-105 transition-all duration-300 transform"
+            className="px-6 py-3 text-md text-white cursor-pointer hover:text-md hover:scale-105 transition-all duration-300 transform"
           >
             {item.name}
           </li>
