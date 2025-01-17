@@ -21,14 +21,14 @@ const ScrollToTopButton = () => {
   return (
     <button
       onClick={scrollToTop}
-      className={`fixed bottom-10 right-10 bg-pink-500 text-white py-4 px-2 rounded-full shadow-lg transition-all flex flex-col items-center justify-center group ${
+      className={`fixed bottom-20 right-5 bg-pink-500 text-white py-4 px-2 rounded-full shadow-lg transition-all flex flex-col items-center justify-center group ${
         isVisible
           ? "opacity-100 transform translate-y-0"
           : "opacity-0 transform translate-y-10"
       }`}
     >
       <div
-        className="absolute bottom-full mb-3 font-bold text-black text-xs px-2 opacity-0 group-hover:opacity-100 transition-opacity"
+        className="absolute bottom-full mb-3 font-bold text-black text-xs px-2 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"
         style={{
           writingMode: "vertical-rl",
           transform: "rotate(180deg)",

@@ -3,6 +3,7 @@ import Navbar from "./components/navbar/Navbar";
 import Homepage from "./components/home/HomeIndex";
 
 import ScrollToTopButton from "./components/utility/ScrollToTopBtn";
+import DemoBtn from "./components/utility/DemoBtn";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Navbar />
       <Homepage />
       <ScrollToTopButton />
+      <DemoBtn />
     </div>
   );
 }

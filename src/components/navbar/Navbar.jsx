@@ -4,7 +4,7 @@ import { FaBars, FaTimes } from "react-icons/fa";
 import Submenu from "./Submenu";
 import { NavMenuItems } from "../utility/NavMenuItems";
 
-import logo from "../assets/homePage/logo.png";
+import logo from "../../assets/homePage/logo.png";
 
 const Navbar = () => {
   const [hoveredMenu, setHoveredMenu] = useState(null);

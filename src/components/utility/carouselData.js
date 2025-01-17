@@ -1,11 +1,10 @@
-// src/constants/carouselData.js
 
-import agriTech from "../assets/homePage/agri-tech.png";
-import healthTech from "../assets/homePage/healthcare.png";
-import finance from "../assets/homePage/finance.png";
-import education from "../assets/homePage/education.png";
-import logistic from "../assets/homePage/logistics.png";
-import manufacturing from "../assets/homePage/manufacturing.png";
+import agriTech from "../../assets/homePage/agri-tech.png";
+import healthTech from "../../assets/homePage/healthcare.png";
+import finance from "../../assets/homePage/finance.png";
+import education from "../../assets/homePage/education.png";
+import logistic from "../../assets/homePage/logistics.png";
+import manufacturing from "../../assets/homePage/manufacturing.png";
 export const carouselData = [
   {
     id: 1,

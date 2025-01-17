@@ -2,8 +2,13 @@ import React from "react";
 import Banner from "./Banner";
 import CarouselComponent from "./Carousel";
 import MultiRowCarousel from "./MultiRowCarousel";
+import AiTutorPhase from "./AiTutorPhase";
+import AiTutorCharter from "./AiTutorCharter";
+import AispryLearning from "./AispryLearning";
+import Awards from "./Awards";
 
-import digital from "../assets/homePage/digital.webp";
+import digital from "../../assets/homePage/digital.webp";
+
 
 const HomeIndex = () => {
   return (
@@ -15,24 +20,28 @@ const HomeIndex = () => {
           <h1 className="text-2xl md:text-2xl text-red-500 font-semibold text-center">
             Pushing Digital Boundaries
           </h1>
-          <p className="text-gray-600 py-4 md:w-1/3 mx-auto">
+          <p className="text-gray-600 py-4 md:w-2/5 mx-auto px-4 text-center">
             Beyond borders, beyond conventions; we redefine the digital horizon.
             Melding traditional wisdom with modern technology, we lead the AI
             evolution.
           </p>
         </div>
       </section>
-      <div className="flex w-4/5 mx-auto  mt-8 flex-wrap">
+      <div className="flex max-w-6xl mx-auto  mt-10 flex-wrap">
         <img
           src={digital}
           alt="DigitalImage"
-          className="w-auto object-contain h-96 m-auto shadow-md"
+          className="w-auto h-auto object-contain md:mr-10 md:h-96 shadow-md mt-8"
         />
 
         <div className="w-1/2">
           <MultiRowCarousel />
         </div>
       </div>
+      <AiTutorPhase />
+      <AiTutorCharter />
+      <AispryLearning />
+      <Awards />
     </>
   );
 };

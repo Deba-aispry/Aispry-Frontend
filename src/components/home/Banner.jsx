@@ -1,8 +1,8 @@
 import React from "react";
-import homebanner from "../assets/homePage/homebanner.webp";
-import aiImage from "../assets/homePage/aiImage.webp";
-import mission from "../assets/homePage/mission.png";
-import vision from "../assets/homePage/vision.png";
+import homebanner from "../../assets/homePage/homebanner.webp";
+import aiImage from "../../assets/homePage/aiImage.webp";
+import mission from "../../assets/homePage/mission.png";
+import vision from "../../assets/homePage/vision.png";
 const Banner = () => {
   return (
     <>

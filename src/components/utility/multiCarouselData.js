@@ -1,11 +1,11 @@
-import agricultural from "../assets/homePage/agricultural.png";
-import medical from "../assets/homePage/medical.png";
-import egg from "../assets/homePage/egg.png";
-import financial from "../assets/homePage/financial.png";
-import inventory from "../assets/homePage/inventory.png";
-import machine from "../assets/homePage/machine.png";
-import pallet from "../assets/homePage/pallet.png";
-import innovation from "../assets/homePage/innovation.png";
+import agricultural from "../../assets/homePage/agricultural.png";
+import medical from "../../assets/homePage/medical.png";
+import egg from "../../assets/homePage/egg.png";
+import financial from "../../assets/homePage/financial.png";
+import inventory from "../../assets/homePage/inventory.png";
+import machine from "../../assets/homePage/machine.png";
+import pallet from "../../assets/homePage/pallet.png";
+import innovation from "../../assets/homePage/innovation.png";
 
 export const multiCarouselData = [
   {
