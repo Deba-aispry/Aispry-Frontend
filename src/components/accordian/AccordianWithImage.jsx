@@ -16,7 +16,7 @@ const AccordionWithImage = () => {
         {accordianData.map(({ header, content, image }, i) => (
           <div key={i} className="mb-4">
             <div
-              className={`cursor-pointer p-4 rounded-md shadow-md transition ${
+              className={`cursor-pointer p-4 rounded-t-md shadow-md transition ${
                 activeIndex === i
                   ? "bg-gray-200"
                   : "bg-gray-100 hover:bg-gray-200"
@@ -34,7 +34,7 @@ const AccordionWithImage = () => {
 
             {activeIndex === i && (
               <>
-                <div className="bg-white p-2  text-left rounded-md shadow-md">
+                <div className="bg-white p-2  text-left rounded-b-md shadow-md">
                   <p className="text-gray-700">{content}</p>
                 </div>
                 <div className="my-4 lg:hidden">

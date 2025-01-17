@@ -4,12 +4,14 @@ import Homepage from "./components/home/HomeIndex";
 
 import ScrollToTopButton from "./components/utility/ScrollToTopBtn";
 import DemoBtn from "./components/utility/DemoBtn";
+import Footer from "./components/footer/Footer";
 
 function App() {
   return (
     <div className="App">
       <Navbar />
       <Homepage />
+      <Footer />
       <ScrollToTopButton />
       <DemoBtn />
     </div>

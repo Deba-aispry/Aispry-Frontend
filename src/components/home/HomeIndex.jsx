@@ -31,7 +31,7 @@ const HomeIndex = () => {
         <img
           src={digital}
           alt="DigitalImage"
-          className="w-auto h-auto object-contain md:mr-10 md:h-96 shadow-md mt-8"
+          className="w-auto h-auto object-contain md:mr-16 md:h-96 shadow-md mt-8"
         />
 
         <div className="w-1/2">

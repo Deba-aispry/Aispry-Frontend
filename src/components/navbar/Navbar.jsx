@@ -1,23 +1,35 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa"; 
-
 import Submenu from "./Submenu";
 import { NavMenuItems } from "../utility/NavMenuItems";
-
 import logo from "../../assets/homePage/logo.png";
 
 const Navbar = () => {
   const [hoveredMenu, setHoveredMenu] = useState(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [openSubmenuIndex, setOpenSubmenuIndex] = useState(null);
+  const [isSticky, setIsSticky] = useState(false);
+
+  // Track scroll position
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsSticky(window.scrollY > 0); // Navbar becomes sticky after scrolling
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const toggleSubmenu = (index) => {
     setOpenSubmenuIndex(openSubmenuIndex === index ? null : index);
   };
 
   return (
-    <nav className="bg-gradient-to-r from-[#ef8e38] to-[#108dc7] sticky top-0 z-20">
-      <div className="max-w-6xl mx-auto  px-4 md:px-0">
+    <nav
+      className={`transition-all duration-300 ease-in-out ${
+        isSticky ? "bg-opacity-90 shadow-lg scale-100" : "bg-opacity-100"
+      } bg-gradient-to-r from-[#ef8e38] to-[#108dc7] sticky top-0 z-20`}
+    >
+      <div className="max-w-6xl mx-auto px-4 md:px-0">
         <div className="flex justify-between items-center py-6">
           <div className="flex-shrink-0">
             <img src={logo} alt="aiSpry-logo" className="h-full" />
@@ -36,7 +48,6 @@ const Navbar = () => {
                   {item.label}
                 </button>
 
-                {/* Submenu for desktop: Positioning outside the navbar */}
                 {hoveredMenu === index && item.submenu.length > 0 && (
                   <Submenu items={item.submenu} />
                 )}
@@ -46,11 +57,10 @@ const Navbar = () => {
 
           {/* Mobile Hamburger Menu */}
           <div className="md:hidden">
-          <button
+            <button
               className="text-white p-2"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
-              {/* Hamburger icon changes to cross */}
               <div
                 className={`transition-transform duration-300 ${
                   isMobileMenuOpen ? "rotate-90" : "rotate-0"
@@ -66,7 +76,7 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* Mobile Menu (Sliding Drawer) */}
+        {/* Mobile Menu */}
         <div
           className={`${
             isMobileMenuOpen ? "translate-x-0" : "-translate-x-full"
@@ -76,13 +86,12 @@ const Navbar = () => {
             {NavMenuItems.map((item, index) => (
               <div key={index} className="relative">
                 <button
-                  onClick={() => toggleSubmenu(index)} // Toggle submenu visibility on click
+                  onClick={() => toggleSubmenu(index)}
                   className="text-white text-sm font-medium px-3 py-2"
                 >
                   {item.label}
                 </button>
 
-                {/* Conditionally render submenu items on mobile */}
                 {openSubmenuIndex === index && item.submenu.length > 0 && (
                   <div>
                     <Submenu items={item.submenu} />
