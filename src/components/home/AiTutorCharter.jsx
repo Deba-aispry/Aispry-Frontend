@@ -1,44 +1,53 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import equest from "../../assets/homePage/equest.png";
+import llArrow from "../../assets/homePage/arrow-ktl.png";
+import rlArrow from "../../assets/homePage/arrow-ktl-right.png";
 import { aiTutorCharterData } from "../utility/aiTutorCharterData";
 
 const AiTutorCharter = () => {
   const topics = [
     {
       label: "Broadly Distributed System",
-      position: { left: "-20%", top: "5%" },
+      position: { left: "-10%", top: "5%" },
     },
     {
-      label: "Data Privacy & Security",
-      position: { left: "-40%", top: "40%" },
+      label: "Data-Privacy & Security",
+      position: { left: "-18%", top: "40%" },
     },
-    { label: "Continuous Evolution", position: { left: "-15%", top: "80%" } },
+    { label: "Continuous Evolution", position: { left: "-25%", top: "75%" } },
     {
       label: "Innovative Pedagogical Insights",
-      position: { right: "-20%", top: "5%" },
+      position: { right: "-10%", top: "5%" },
     },
-    { label: "Empowering Educators", position: { right: "-40%", top: "40%" } },
-    { label: "Collaborative Growth", position: { right: "-15%", top: "80%" } },
+    { label: "Empowering Educators", position: { right: "-17%", top: "40%" } },
+    { label: "Collaborative Growth", position: { right: "-25%", top: "75%" } },
   ];
 
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [showDetails, setShowDetails] = useState(true);
+  const [activeIndex, setActiveIndex] = useState(0); 
+  const [arrowHeight, setArrowHeight] = useState(null);
+  const contentRef = useRef(null);
+  const containerRef = useRef(null);
+
+  useEffect(() => {
+    if (contentRef.current) {
+      setArrowHeight(contentRef.current.offsetTop); 
+    }
+  }, [activeIndex]);
 
   const handleClick = (index) => {
-    if (index === activeIndex) {
-      setShowDetails(!showDetails);
-    } else {
-      setActiveIndex(index);
-      setShowDetails(true);
-    }
+    setActiveIndex((prevIndex) => (prevIndex === index ? null : index));
   };
 
   return (
-    <div className="relative flex flex-col items-center justify-center my-10">
+    <div
+      className="relative flex flex-col items-center justify-center my-10"
+      ref={containerRef}
+    >
       <h3 className="text-2xl font-semibold mb-8 text-red-500">
         AiTutor Charter
       </h3>
 
+      {/* Topics and Image */}
       <div className="relative w-[400px] h-[400px]">
         <img
           src={equest}
@@ -64,32 +73,67 @@ const AiTutorCharter = () => {
             </span>
           );
         })}
+
+        
+        {activeIndex !== null && (
+          <>
+            {topics[activeIndex].position.left !== undefined && (
+              <img
+                src={llArrow}
+                alt="Left Arrow"
+                className="absolute"
+                style={{
+                  top: topics[activeIndex].position.top,
+                  left: topics[activeIndex].position.left,
+                  height: `calc(${arrowHeight || 0}px - ${
+                    topics[activeIndex].position.top
+                  })`,
+                  transform: "translate(-150%, 7%)",
+                }}
+              />
+            )}
+            {topics[activeIndex].position.right !== undefined && (
+              <img
+                src={rlArrow}
+                alt="Right Arrow"
+                className="absolute"
+                style={{
+                  top: topics[activeIndex].position.top,
+                  right: topics[activeIndex].position.right,
+                  height: `calc(${arrowHeight || 0}px - ${
+                    topics[activeIndex].position.top
+                  })`,
+                  transform: "translate(150%, 0)",
+                }}
+              />
+            )}
+          </>
+        )}
       </div>
 
-      {showDetails && (
-        <div className="mt-8 w-[50%] p-4 border rounded-md shadow-lg bg-white text-center">
-          {aiTutorCharterData[activeIndex] && (
-            <>
-              <div className="flex text-start text-gray-600">
-                <p className="ml-2">
-                  <span className="text-lg font-semibold">Objective: </span>
-                  {aiTutorCharterData[activeIndex].objective ||
-                    "Objective not provided."}
-                </p>
-              </div>
-              <div className="flex text-start text-gray-600 mt-4">
-                <p className="ml-2">
-                  <span className="text-lg font-semibold">Approach: </span>
-                  {aiTutorCharterData[activeIndex].approach ||
-                    "Approach not provided."}
-                </p>
-              </div>
-            </>
-          )}
+      {activeIndex !== null && aiTutorCharterData[activeIndex] && (
+        <div
+          ref={contentRef}
+          className="mt-8 w-[45%] p-4 border rounded-md shadow-lg bg-white text-center"
+        >
+          <div className="flex text-start text-gray-600">
+            <p className="ml-2">
+              <span className="text-lg font-semibold">Objective: </span>
+              {aiTutorCharterData[activeIndex].objective ||
+                "Objective not provided."}
+            </p>
+          </div>
+          <div className="flex text-start text-gray-600 mt-4">
+            <p className="ml-2">
+              <span className="text-lg font-semibold">Approach: </span>
+              {aiTutorCharterData[activeIndex].approach ||
+                "Approach not provided."}
+            </p>
+          </div>
         </div>
       )}
     </div>
   );
-};  
+};
 
 export default AiTutorCharter;
