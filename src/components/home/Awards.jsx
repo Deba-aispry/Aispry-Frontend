@@ -2,23 +2,22 @@ import React, { memo } from "react";
 import { awardsData } from "../utility/awardsData";
 
 const AwardCard = memo(({ imgSrc, title, description }) => (
-  <div className="p-6 text-center">
+  <div className="p-6 text-center rounded bg-[#0e2b52] text-white">
     <img
       src={imgSrc}
       alt={title}
       className="w-full h-auto object-cover rounded-md mb-4"
       loading="lazy" 
     />
-    <h4 className="text-lg font-semibold mb-2 text-gray-800">{title}</h4>
-    <p className="text-gray-600">{description}</p>
+    <h4 className="text-lg font-semibold mb-2 text-white">{title}</h4>
+    <p className="text-white">{description}</p>
   </div>
 ));
 
 const Awards = () => {
   return (
-    <div className="p-8 md:w-[75%] mx-auto">
-      
-      <h3 className="text-3xl font-semibold text-center mb-6 text-red-500">
+    <div className="p-8 md:w-[75%] mx-auto mt-8">
+      <h3 className="text-4xl font-semibold text-center mb-10 text-white">
         Awards & Accolades
       </h3>
 

@@ -2,7 +2,7 @@ import React from "react";
 
 const Submenu = ({ items }) => {
   return (
-    <div className="absolute  left-0  w-72 bg-gradient-to-r from-[#108dc7] to-[#ef8e38] rounded-md shadow-lg z-10">
+    <div className="absolute  left-0  w-72 bg-[#00001c] rounded-md shadow-lg z-10">
       <ul className="py-2">
         {items.map((item, index) => (
           <li

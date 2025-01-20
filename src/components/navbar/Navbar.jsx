@@ -10,10 +10,9 @@ const Navbar = () => {
   const [openSubmenuIndex, setOpenSubmenuIndex] = useState(null);
   const [isSticky, setIsSticky] = useState(false);
 
-  // Track scroll position
   useEffect(() => {
     const handleScroll = () => {
-      setIsSticky(window.scrollY > 0); // Navbar becomes sticky after scrolling
+      setIsSticky(window.scrollY > 20); 
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -27,7 +26,7 @@ const Navbar = () => {
     <nav
       className={`transition-all duration-300 ease-in-out ${
         isSticky ? "bg-opacity-90 shadow-lg scale-100" : "bg-opacity-100"
-      } bg-gradient-to-r from-[#ef8e38] to-[#108dc7] sticky top-0 z-20`}
+      } bg-[#081118] sticky top-0 left-0  z-50`}
     >
       <div className="max-w-6xl mx-auto px-4 md:px-0">
         <div className="flex justify-between items-center py-6">

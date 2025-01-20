@@ -1,19 +1,19 @@
 import React from "react";
 import Carousel from "react-multi-carousel";
-import { carouselData } from "../utility/carouselData";
+import { sectorCarouselData } from "../utility/sectorCarouselData";
 
 const responsive = {
   superLargeDesktop: {
     breakpoint: { max: 4000, min: 1024 },
-    items: 4,
+    items: 3,
   },
   desktop: {
     breakpoint: { max: 1024, min: 768 },
-    items: 3,
+    items: 2,
   },
   tablet: {
     breakpoint: { max: 768, min: 464 },
-    items: 2,
+    items: 1,
   },
   mobile: {
     breakpoint: { max: 464, min: 0 },
@@ -22,45 +22,58 @@ const responsive = {
 };
 
 const CarouselComponent = () => {
+  const handleSeeMore = (id) => {
+    // Implement functionality for the "See More" button (e.g., navigate to detail page)
+    console.log(`See more clicked for card ID: ${id}`);
+  };
+
   return (
-    <div className="mt-16">
+    <div className="mt-16 container max-w-7xl mx-auto">
       <div>
-        <h1 className="text-2xl text-red-500 font-semibold text-center">
-          Leading AI Transformation Across Verticals
+        <h1 className="text-4xl text-white font-semibold text-center">
+          AI Solutions
         </h1>
-        <p className="text-gray-600 py-4 text-start md:text-center mx-4">
-          From the intricacies of healthcare to the nuances of finance, our AI
-          solutions cater to diverse industries.
+        <p className="text-white py-4 text-center md:text-lg md:text-center mx-4">
+          Redefine the way you do business with our cutting-edge AI Solutions.
+          From revolutionizing customer experiences to unlocking the power of
+          predictive insights, we help you innovate and lead in a competitive
+          world.
         </p>
       </div>
-      <div className="carousel-container my-12 max-w-6xl mx-auto">
+      <div className="carousel-container my-12">
         <Carousel
           responsive={responsive}
           infinite={true}
           autoPlay={true}
-          autoPlaySpeed={3000}
+          autoPlaySpeed={4000}
           showDots={true}
           arrows={false}
           itemClass="carousel-item-padding"
         >
-          {carouselData.map((card) => (
+          {sectorCarouselData.map((card) => (
             <div
               key={card.id}
-              className="carousel-card px-4 py-8 bg-white border-2 mx-4 mb-12  h-80 flex flex-col items-center "
+              className="carousel-card px-6 py-10 bg-[#0c0c24]  mx-4 mb-12 rounded-lg shadow-lg flex flex-col items-center"
             >
               <img
-                src={card.image}
+                src={card?.image}
                 alt={card.heading}
-                className="card-image w-16 h-auto object-cover rounded-t-lg"
+                className="card-image w-full h-64 object-cover rounded-xl  hover:scale-105 transition-all transform "
                 loading="lazy"
               />
-              <div className="p-2 mt-4 h-40 overflow-hidden flex flex-col justify-between text-center">
-                <h3 className="card-heading text-xl font-semibold text-gray-800 mb-2">
+              <div className="p-4 mt-4 flex flex-col justify-between text-center">
+                <h3 className="card-heading text-2xl font-bold text-gray-800 mb-4">
                   {card.heading}
                 </h3>
-                <p className="card-description text-gray-600">
+                <p className="card-description text-white text-md leading-relaxed h-28 overflow-hidden">
                   {card.description}
                 </p>
+                <button
+                  onClick={() => handleSeeMore(card.id)}
+                  className="see-more-btn mt-4 px-6 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700"
+                >
+                  See More
+                </button>
               </div>
             </div>
           ))}

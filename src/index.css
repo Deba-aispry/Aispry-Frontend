@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
+body {
+  background: #00001c;
+}
+
 .custom-bg {
   position: relative;
   overflow: hidden;
@@ -34,5 +40,23 @@
     width: 200%;
     height: 200%;
     background: rgba(138, 217, 248, 0);
+  }
+}
+
+.header-animation {
+  opacity: 0;
+  transform: rotatey(40deg);
+  animation: fadeInRotate 1s ease-in-out forwards;
+  animation-delay: 1s;
+}
+
+@keyframes fadeInRotate {
+  0% {
+    opacity: 0;
+    transform: rotateY(40deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotateY(0deg);
   }
 }
