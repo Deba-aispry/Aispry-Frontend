@@ -6,8 +6,9 @@
 
 body {
   background: #00001c;
+  font-family: 'Barlow', sans-serif;
 }
-
+/* f4f6f7 */
 .custom-bg {
   position: relative;
   overflow: hidden;

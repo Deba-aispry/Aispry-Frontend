@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-// import { FaAngleLeft, FaAngleRight } from "react-icons/fa"; 
+// import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 import TestimonialList from "./TestimonialList";
 
 const Testimonial20 = () => {
@@ -58,44 +58,28 @@ const Testimonial20 = () => {
     ],
   ];
 
-//   const handleControl = (type) => {
-//     setIndex(
-//       type === "prev"
-//         ? index === 0
-//           ? testimonialList.length - 1
-//           : index - 1
-//         : (index + 1) % testimonialList.length
-//     );
-//   };
+  //   const handleControl = (type) => {
+  //     setIndex(
+  //       type === "prev"
+  //         ? index === 0
+  //           ? testimonialList.length - 1
+  //           : index - 1
+  //         : (index + 1) % testimonialList.length
+  //     );
+  //   };
 
   return (
-    <section className="testimonial-section bg-[#487cec] bg-opacity-90 text-white dark:text-white py-14 md:py-24 mt-20">
+    <section className="testimonial-section bg-[#487cec] bg-opacity-90 text-white dark:text-white py-14 md:py-24 mt-20 px-4">
       <div className="container mx-auto max-w-6xl">
-        <div className="flex justify-between mb-6">
-          <div className="w-2/3 lg:max-w-lg">
-            <h2 className="font-bold text-3xl md:text-4xl mb-4">
-              What Our Clients Say
-            </h2>
-            <p className="text-lg">
-              Assumenda non repellendus distinctio nihil dicta sapiente,
-              quibusdam maiores, illum at, aliquid blanditiis eligendi qui.
-            </p>
-          </div>
-          {/* <div className="w-1/3 flex justify-end items-center">
-            <button
-              className="control-btn flex items-center justify-center w-10 h-10 bg-gray-100 rounded-full shadow-md hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700"
-              onClick={() => handleControl("prev")}
-            >
-              <FaAngleLeft size={20} />
-            </button>
-            <button
-              className="control-btn ml-4 flex items-center justify-center w-10 h-10 bg-gray-100 rounded-full shadow-md hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700"
-              onClick={() => handleControl("next")}
-            >
-              <FaAngleRight size={20} />
-            </button>
-          </div> */}
+        <div className="w-full md:w-2/3 lg:max-w-lg mx-auto">
+          <h2 className="text-5xl font-semibold md:text-4xl mb-4 mx-auto md:ml-24 ml-4">
+            What Our Clients Say
+          </h2>
         </div>
+        <p className="text-lg md:w-2/3 mx-auto text-center">
+          Assumenda non repellendus distinctio nihil dicta sapiente, quibusdam
+          maiores, illum at, aliquid blanditiis eligendi qui.
+        </p>
         <TestimonialList testimonials={testimonialList[index]} />
       </div>
     </section>

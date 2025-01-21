@@ -17,7 +17,7 @@ const AwardCard = memo(({ imgSrc, title, description }) => (
 const Awards = () => {
   return (
     <div className="p-8 md:w-[75%] mx-auto mt-8">
-      <h3 className="text-4xl font-semibold text-center mb-10 text-white">
+      <h3 className="text-5xl font-semibold text-center mb-16 text-white">
         Awards & Accolades
       </h3>
 

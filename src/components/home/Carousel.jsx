@@ -29,8 +29,8 @@ const CarouselComponent = () => {
 
   return (
     <div className="mt-16 container max-w-7xl mx-auto">
-      <div>
-        <h1 className="text-4xl text-white font-semibold text-center">
+      <div className="w-full md:max-w-3xl mx-auto">
+        <h1 className="text-5xl font-semibold text-white  text-center">
           AI Solutions
         </h1>
         <p className="text-white py-4 text-center md:text-lg md:text-center mx-4">
@@ -47,7 +47,7 @@ const CarouselComponent = () => {
           autoPlay={true}
           autoPlaySpeed={4000}
           showDots={true}
-          arrows={false}
+          arrows={true}
           itemClass="carousel-item-padding"
         >
           {sectorCarouselData.map((card) => (
