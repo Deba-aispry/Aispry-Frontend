@@ -2,11 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
 body {
   background: #00001c;
-  font-family: 'Barlow', sans-serif;
+  font-family: "Barlow", sans-serif;
 }
 /* f4f6f7 */
 .custom-bg {
@@ -61,3 +59,13 @@ body {
     transform: rotateY(0deg);
   }
 }
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+

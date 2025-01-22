@@ -58,4 +58,13 @@ export const aiInActionData = [
       "Build smarter workflows, automate tedious tasks, and unlock new business potentials with tailored AI systems.",
     image: customAi,
   },
+  {
+    id: 6,
+    label: "Generative AI",
+    text: "Your vision. Our innovation. Together, we’ll create bespoke Custom AI Solutions designed specifically for your unique needs. From ideation to deployment, we craft AI systems that redefine what’s possible.",
+    keyPoint: "Specialized AI:",
+    details:
+      "Build smarter workflows, automate tedious tasks, and unlock new business potentials with tailored AI systems.",
+    image: customAi,
+  },
 ];

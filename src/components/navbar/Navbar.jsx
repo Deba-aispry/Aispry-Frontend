@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { FaBars, FaTimes } from "react-icons/fa"; 
+import { FaBars, FaTimes } from "react-icons/fa";
 import Submenu from "./Submenu";
 import { NavMenuItems } from "../utility/NavMenuItems";
-import logo from "../../assets/homePage/logo.png";
+import footerlogo from "../../assets/homePage/footerlogo.webp";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [hoveredMenu, setHoveredMenu] = useState(null);
@@ -12,7 +13,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsSticky(window.scrollY > 20); 
+      setIsSticky(window.scrollY > 20);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -26,12 +27,18 @@ const Navbar = () => {
     <nav
       className={`transition-all duration-300 ease-in-out ${
         isSticky ? "bg-opacity-90 shadow-lg scale-100" : "bg-opacity-100"
-      } bg-[#081118] sticky top-0 left-0  z-50`}
+      } bg-white sticky top-0 left-0  z-50`}
     >
       <div className="max-w-6xl mx-auto px-4 md:px-0">
         <div className="flex justify-between items-center py-6">
           <div className="flex-shrink-0">
-            <img src={logo} alt="aiSpry-logo" className="h-full" />
+            <Link to="/">
+              <img
+                src={footerlogo}
+                alt="aiSpry-logo"
+                className="h-full cursor-pointer"
+              />
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
@@ -43,7 +50,7 @@ const Navbar = () => {
                 onMouseEnter={() => setHoveredMenu(index)}
                 onMouseLeave={() => setHoveredMenu(null)}
               >
-                <button className="text-white text-lg font-medium px-3 py-2 rounded-md transition duration-300 transform group-hover:scale-110">
+                <button className="text-lg font-medium px-3 py-2 rounded-md transition duration-300 transform group-hover:text-[#f48220] group-hover:scale-110">
                   {item.label}
                 </button>
 
@@ -94,7 +101,7 @@ const Navbar = () => {
                 {openSubmenuIndex === index && item.submenu.length > 0 && (
                   <div>
                     <Submenu items={item.submenu} />
-                  </div>        
+                  </div>
                 )}
               </div>
             ))}

@@ -6,7 +6,7 @@ const Rating = ({ rating }) => (
     {[...Array(5)].map((_, i) => {
       const index = i + 1;
       return (
-        <span key={i} className="text-xl text-yellow-500">
+        <span key={i} className="text-xl text-[#ef8e38]">
           {index <= Math.floor(rating) ? (
             <FaStar />
           ) : index <= rating ? (

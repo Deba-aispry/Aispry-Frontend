@@ -1,15 +1,19 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Submenu = ({ items }) => {
   return (
-    <div className="absolute  left-0  w-72 bg-[#00001c] rounded-md shadow-lg z-10">
+    <div className="absolute left-0 w-72 bg-gray-100 rounded-lg shadow-md z-10">
       <ul className="py-2">
         {items.map((item, index) => (
-          <li
-            key={index}
-            className="px-6 py-3 text-md text-white cursor-pointer hover:text-md hover:scale-105 transition-all duration-300 transform"
-          >
-            {item.name}
+          <li key={index}>
+            <Link
+              to={item?.path}
+              className="block px-6 py-3 text-md font-medium  hover:text-[#f48220] 
+              transition-all duration-300 ease-in-out rounded-md"
+            >
+              {item.name}
+            </Link>
           </li>
         ))}
       </ul>

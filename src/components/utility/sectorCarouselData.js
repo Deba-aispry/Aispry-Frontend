@@ -1,11 +1,10 @@
-
 import ecommerce from "../../assets/homePage/ecommerce.webp";
 import financial from "../../assets/homePage/financial.webp";
 import manufacturing from "../../assets/homePage/manufacturing.webp";
 import fmcgImage from "../../assets/homePage/fmcgImage.webp";
 import esgImage from "../../assets/homePage/esgImage.webp";
-import healthcare from "../../assets/homePage/medical.webp"; 
-import energy from "../../assets/homePage/energy.webp"
+import healthcare from "../../assets/homePage/medical.webp";
+import energy from "../../assets/homePage/energy.webp";
 export const sectorCarouselData = [
   {
     id: 1,
@@ -13,6 +12,7 @@ export const sectorCarouselData = [
     description:
       "Empowering healthcare providers with intelligent systems for faster diagnoses, enhanced patient care, and groundbreaking research capabilities.",
     image: healthcare,
+    path: "/industry/healthcare",
     highlights: [
       {
         title: "AI Diagnostics",
@@ -47,6 +47,7 @@ export const sectorCarouselData = [
     description:
       "Drive sustainability and efficiency with AI solutions tailored for energy production and distribution. Predict outages, reduce waste, and ensure workplace safety.",
     image: energy,
+    path: "/industry/energy",
     highlights: [
       {
         title: "Energy Forecasting",
@@ -55,13 +56,11 @@ export const sectorCarouselData = [
       },
       {
         title: "Asset Health Management",
-        detail:
-          "AI to predict equipment failures and optimize repairs.",
+        detail: "AI to predict equipment failures and optimize repairs.",
       },
       {
         title: "Workplace Hazard Prevention",
-        detail:
-          "Computer vision for monitoring high-risk environments.",
+        detail: "Computer vision for monitoring high-risk environments.",
       },
     ],
   },
@@ -71,6 +70,7 @@ export const sectorCarouselData = [
     description:
       "Reimagine supply chains, enhance safety, and optimize inventory with AI tailored for the fast-moving consumer goods and food sectors.",
     image: fmcgImage,
+    path: "/industry/fmcg",
     highlights: [
       {
         title: "Dynamic Route Optimization",
@@ -100,11 +100,11 @@ export const sectorCarouselData = [
     description:
       "Deliver personalized experiences and smarter operations. Elevate your retail and e-commerce business with AI that predicts, analyzes, and adapts.",
     image: ecommerce,
+    path: "/industry/ecommerce",
     highlights: [
       {
         title: "AI-Powered Merchandising",
-        detail:
-          "Dynamic product placements based on consumer behavior.",
+        detail: "Dynamic product placements based on consumer behavior.",
       },
       {
         title: "Conversational Commerce",
@@ -129,6 +129,7 @@ export const sectorCarouselData = [
     description:
       "Make smarter, safer decisions with AI in finance. Automate processes, detect fraud, and deliver personalized financial solutions for your customers.",
     image: financial,
+    path: "/industry/financial",
     highlights: [
       {
         title: "Fraud detection and risk management",
@@ -150,10 +151,11 @@ export const sectorCarouselData = [
   },
   {
     id: 6,
-    title: "Environmental, Social, and Governance (ESG)",
+    title: "ESG",
     description:
       "Monitor, measure, and act for a better tomorrow. Use AI to track environmental impact, enhance sustainability, and ensure compliance with ESG goals.",
     image: esgImage,
+    path: "/industry/esg",
     highlights: [
       {
         title: "AI for Carbon Neutrality",
@@ -167,8 +169,7 @@ export const sectorCarouselData = [
       },
       {
         title: "Compliance Automation",
-        detail:
-          "Intelligent systems for ESG regulation adherence.",
+        detail: "Intelligent systems for ESG regulation adherence.",
       },
       {
         title: "AI-Powered Risk Assessment",
@@ -182,6 +183,7 @@ export const sectorCarouselData = [
     description:
       "Pioneering Industry 4.0 with transformative solutions that enhance productivity, minimize downtime, and ensure safety. From smart factories to streamlined operations, we power the next industrial revolution.",
     image: manufacturing,
+    path: "/industry/manufacturing",
     highlights: [
       {
         title: "Predictive Maintenance",
@@ -193,8 +195,7 @@ export const sectorCarouselData = [
       },
       {
         title: "AI-Powered Hazard Detection",
-        detail:
-          "Tracking employees and environments to prevent accidents.",
+        detail: "Tracking employees and environments to prevent accidents.",
       },
       {
         title: "Stock Management",
