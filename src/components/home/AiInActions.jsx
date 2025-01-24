@@ -15,7 +15,7 @@ const AiInActions = () => {
 
       <div className="relative z-20 text-center mt-12 header-animation">
         <h1 className="text-5xl font-semibold  text-white mb-4">AI In Actions</h1>
-        <p className="text-white text-xl max-w-3xl mx-auto">
+        <p className="text-white text-xl font-semibold max-w-3xl mx-auto">
           Redefine the way you do business with our cutting-edge AI Solutions.
           From revolutionizing customer experiences to unlocking the power of
           predictive insights, we help you innovate and lead in a competitive
@@ -28,7 +28,7 @@ const AiInActions = () => {
         {aiInActionData.map((card) => (
           <div
             key={card.id}
-            className="bg-white mb-4 p-6 rounded-lg shadow-lg hover:shadow-orange-500/60 hover:shadow-2xl hover:transform hover:scale-105 transition-transform duration-300"
+            className="bg-white mb-4 p-6 rounded-lg shadow-lg  hover:shadow-2xl hover:transform hover:scale-105 transition-transform duration-300"
           >
             <h3 className="text-3xl text-center font-semibold mb-8">{card.label}</h3>
             <p className="text-lg mb-6">{card.text}</p>

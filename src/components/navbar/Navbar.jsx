@@ -26,7 +26,7 @@ const Navbar = () => {
   return (
     <nav
       className={`transition-all duration-300 ease-in-out ${
-        isSticky ? "bg-opacity-90 shadow-lg scale-100" : "bg-opacity-100"
+        isSticky ? "shadow-lg " : "bg-opacity-100"
       } bg-white sticky top-0 left-0  z-50`}
     >
       <div className="max-w-6xl mx-auto px-4 md:px-0">

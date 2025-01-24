@@ -59,7 +59,7 @@ const CarouselComponent = () => {
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: false, amount: 0.5 }} // Repeats animation every time it comes into view
+        viewport={{ once: false, amount: 0.5 }}
       >
         <motion.h1
           className="text-5xl font-semibold text-white text-center"
@@ -68,7 +68,7 @@ const CarouselComponent = () => {
           AI Solutions
         </motion.h1>
         <motion.p
-          className="text-white py-4 text-center md:text-lg md:text-center mx-4"
+          className="text-white py-4 text-center md:text-xl font-semibold md:text-center mx-4"
           variants={paragraphVariants}
           initial="hidden"
           whileInView="visible" // Trigger animation when in view

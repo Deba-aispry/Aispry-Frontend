@@ -5,7 +5,7 @@ const TestimonialItem = ({ item }) => {
   const { photo, name, rating, content } = item;
 
   return (
-    <div className="testimonial-item bg-white shadow-lg hover:shadow-orange-500/60 rounded-xl p-6 transition-transform duration-300 transform hover:scale-105 hover:shadow-2xl">
+    <div className="testimonial-item bg-white shadow-lg  rounded-xl p-6 transition-transform duration-300 transform hover:scale-105 hover:shadow-2xl">
       <Rating rating={rating} />
       <p className="text-black mt-4 mb-6">{content}</p>
       <div className="flex items-center">

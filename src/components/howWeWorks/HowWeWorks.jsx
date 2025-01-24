@@ -35,12 +35,26 @@ const HowWeWorks = () => {
     <div className="h-screen overflow-y-scroll hide-scrollbar mb-20  bg-[#487cec] text-white ">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 max-w-6xl mx-auto py-16">
         <div className="sticky md:top-20 mr-6 self-start">
-          <h2 className="text-5xl font-semibold">How We Work</h2>
-          <p className="mt-4 text-lg">
+        <motion.h2
+            className="text-5xl font-semibold"
+            initial={{ x: -200, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            viewport={{ once: false, amount: 0.5 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+          >
+            How We Work
+          </motion.h2>
+          <motion.p
+            className="mt-4 text-xl font-semibold"
+            initial={{ y: 50, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: false, amount: 0.5 }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+          >
             We collaborate closely with you to understand your business
             challenges, design tailored AI solutions, and ensure long-term
             measurable success.
-          </p>
+          </motion.p>
         </div>
 
         <div>
@@ -48,7 +62,7 @@ const HowWeWorks = () => {
             <motion.div
               key={step.id}
               id={step.id}
-              className="card relative bg-white shadow-lg rounded-lg py-6 px-4 mt-6 border-r-8 border-[#ef8e38]"
+              className="card relative bg-white shadow-lg rounded-lg py-6 px-4 mt-6"
               initial={{ opacity: 0, rotateX: -90 }}
               animate={
                 animatedCards.has(String(step.id))
@@ -61,12 +75,13 @@ const HowWeWorks = () => {
                 damping: 20,
               }}
             >
+              <div className="absolute top-0 right-0 w-6 bg-[#ef8e38] h-full "></div>
               <h3 className="text-3xl font-semibold text-center mt-2 mb-4 text-black">
                 {step.title}
               </h3>
               {step?.description.map((item, key) => (
                 <div key={key} className="flex items-center">
-                  <FaCheckCircle className="text-2xl mr-3 rounded-full  bg-gradient-to-r from-[#ef8e38] to-[#108dc7]" />
+                  <FaCheckCircle className="text-2xl mr-3 rounded-full bg-gradient-to-r from-[#ef8e38] to-[#108dc7]" />
                   <span className="text-black my-2 text-lg">{item}</span>
                 </div>
               ))}

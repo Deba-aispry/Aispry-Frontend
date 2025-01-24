@@ -63,8 +63,8 @@ const Testimonial20 = () => {
           className="text-xl font-semibold md:w-2/3 mx-auto text-center"
           variants={paragraphAnimation}
           initial="hidden"
-          whileInView="visible" // Trigger animation when in view
-          viewport={{ once: false, amount: 0.5 }} // Animate once, when 50% visible
+          whileInView="visible"
+          viewport={{ once: false, amount: 0.5 }} 
         >
           Assumenda non repellendus distinctio nihil dicta sapiente, quibusdam
           maiores, illum at, aliquid blanditiis eligendi qui.
