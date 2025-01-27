@@ -3,13 +3,15 @@ import { FaBars, FaTimes } from "react-icons/fa";
 import Submenu from "./Submenu";
 import { NavMenuItems } from "../utility/NavMenuItems";
 import footerlogo from "../../assets/homePage/footerlogo.webp";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [hoveredMenu, setHoveredMenu] = useState(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [openSubmenuIndex, setOpenSubmenuIndex] = useState(null);
   const [isSticky, setIsSticky] = useState(false);
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -50,7 +52,8 @@ const Navbar = () => {
                 onMouseEnter={() => setHoveredMenu(index)}
                 onMouseLeave={() => setHoveredMenu(null)}
               >
-                <button className="text-lg font-medium px-3 py-2 rounded-md transition duration-300 transform group-hover:text-[#f48220] group-hover:scale-110">
+                <button className="text-lg font-medium px-3 py-2 rounded-md transition duration-300 transform 
+                group-hover:text-[#f48220] group-hover:scale-110">
                   {item.label}
                 </button>
 
@@ -59,6 +62,14 @@ const Navbar = () => {
                 )}
               </div>
             ))}
+            <button className="text-lg font-medium px-3 py-2 rounded-md transition duration-300 transform 
+            hover:text-[#f48220] hover:scale-110" onClick={() => navigate("/how-we-works")}>
+              How We Work
+            </button>
+            <button className="text-lg font-medium px-3 py-2 rounded-md transition duration-300 transform 
+            hover:text-[#f48220] hover:scale-110" onClick={() => navigate("/about-us")}>
+              About Us
+            </button>
           </div>
 
           {/* Mobile Hamburger Menu */}

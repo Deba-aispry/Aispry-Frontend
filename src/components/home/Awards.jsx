@@ -4,13 +4,7 @@ import { awardsData } from "../utility/awardsData";
 
 // Memoized AwardCard Component
 const AwardCard = memo(({ imgSrc, title, description }) => (
-  <div
-    className="p-6 text-center rounded bg-[#0e2b52] text-white"
-    // variants={{
-    //   hidden: { opacity: 0, y: 20 },
-    //   visible: { opacity: 1, y: 0, transition: { duration: 0.4 } },
-    // }}
-  >
+  <div className="p-6 text-center rounded bg-[#0e2b52] text-white">
     <img
       src={imgSrc}
       alt={title}
@@ -25,11 +19,11 @@ const AwardCard = memo(({ imgSrc, title, description }) => (
 // Animation for Header (Rolling Effect)
 const rollingCylinderAnimation = {
   hidden: {
-    rotateX: 90, 
+    rotateX: 90,
     opacity: 0,
   },
   visible: {
-    rotateX: 0, 
+    rotateX: 0,
     opacity: 1,
     transition: {
       duration: 1.5,
@@ -52,7 +46,6 @@ const containerVariants = {
 const Awards = () => {
   return (
     <div className="p-8 md:w-[75%] mx-auto mt-8">
-    
       <motion.h3
         className="text-5xl font-semibold text-center mb-16 text-white"
         style={{
@@ -62,7 +55,7 @@ const Awards = () => {
         variants={rollingCylinderAnimation}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: false, amount: 0.5 }} 
+        viewport={{ once: true, amount: 0.5 }}
       >
         Awards & Accolades
       </motion.h3>
@@ -72,7 +65,7 @@ const Awards = () => {
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: false, amount: 0.5 }} 
+        viewport={{ once: true, amount: 0.5 }}
       >
         {awardsData.map((award, index) => (
           <AwardCard

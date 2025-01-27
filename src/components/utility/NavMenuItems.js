@@ -22,14 +22,7 @@ export const NavMenuItems = [
       { name: "ESG", path: "/industry/esg" },
     ],
   },
-  {
-    label: "How we work",
-    submenu: [
-      { name: "Our Process" },
-      { name: "Proof of Concept" },
-      { name: "From Data to Impact" },
-    ],
-  },
+ 
   {
     label: "Resources",
     submenu: [
@@ -40,5 +33,4 @@ export const NavMenuItems = [
       { name: "FAQs" },
     ],
   },
-  { label: "About Us", submenu: [] },
 ];

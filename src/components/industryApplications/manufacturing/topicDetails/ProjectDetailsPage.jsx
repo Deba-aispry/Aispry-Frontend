@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
+
 const ProjectDetailsPage = ({
   headerImage,
+  headerTitle,
   objectives,
   constraints,
   successCriteria,
@@ -12,7 +14,7 @@ const ProjectDetailsPage = ({
   const [activeSection, setActiveSection] = useState("Problem Statement");
   const [scrollProgress, setScrollProgress] = useState(0);
 
-  // Update scroll progress
+  
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
@@ -28,7 +30,7 @@ const ProjectDetailsPage = ({
     };
   }, []);
 
-  // Section Data
+  
   const sections = {
     "Problem Statement": ProblemStatement,
     Objectives: objectives,
@@ -40,18 +42,18 @@ const ProjectDetailsPage = ({
   return (
     <div className="container max-w-7xl mx-auto ">
       <motion.div
-        className="fixed top-28 left-0 h-2 bg-gradient-to-r from-blue-600 to-orange-400 z-50"
+        className="fixed top-28 left-0 h-2 bg-gradient-to-r from-blue-600 to-orange-400 z-40"
         style={{
           width: `${scrollProgress}%`,
         }}
       />
-      {/* Header Image */}
+      
       <div className="flex flex-col md:flex-row items-center md:space-y-0 md:space-x-8">
         <img
           src={headerImage}
           alt="Steel Rods"
           loading="lazy"
-          className="w-full md:w-1/2 h-auto object-cover rounded-lg shadow-lg"
+          className="w-full md:w-3/5 h-96 object-cover rounded-lg shadow-lg"
         />
 
         <motion.div
@@ -59,16 +61,15 @@ const ProjectDetailsPage = ({
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <h3 className="text-4xl font-bold leading-snug mb-4">
-            Revolutionizing Steel Rod Offcuts with Smart Utilization and
-            Automation
+          <h3 className="text-5xl font-semibold leading-snug mb-4">
+           {headerTitle}
           </h3>
         </motion.div>
       </div>
 
-      {/* Sidebar and Content */}
-      <div className="flex my-8">
-        {/* Sidebar */}
+      
+      <div className="flex my-14">
+       
         <motion.aside
           className="w-1/4 rounded-lg shadow-lg"
           initial={{ x: -400 }}
@@ -95,7 +96,6 @@ const ProjectDetailsPage = ({
           </ul>
         </motion.aside>
 
-        {/* Main Content */}
         <main className="w-3/4 mt-12">
           <div className="mb-6 pl-4">
             {sections[activeSection].map((item, index) => (

@@ -59,7 +59,7 @@ const CarouselComponent = () => {
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: false, amount: 0.5 }}
+        viewport={{ once: true, amount: 1 }}
       >
         <motion.h1
           className="text-5xl font-semibold text-white text-center"
@@ -71,8 +71,8 @@ const CarouselComponent = () => {
           className="text-white py-4 text-center md:text-xl font-semibold md:text-center mx-4"
           variants={paragraphVariants}
           initial="hidden"
-          whileInView="visible" // Trigger animation when in view
-          viewport={{ once: false, amount: 0.5 }} // Animate once, when 50% visible
+          whileInView="visible"
+          viewport={{ once: true, amount: 1 }}
         >
           Redefine the way you do business with our cutting-edge AI Solutions.
           From revolutionizing customer experiences to unlocking the power of

@@ -34,7 +34,7 @@ const Testimonial20 = () => {
   ];
 
   const headingAnimation = {
-    hidden: { opacity: 0, x: -100 },
+    hidden: { opacity: 0, x: -600 },
     visible: { opacity: 1, x: 0, transition: { duration: 0.8 } },
   };
 
@@ -45,7 +45,7 @@ const Testimonial20 = () => {
 
   return (
     <section
-      className="testimonial-section bg-[#487cec] text-white py-14 md:py-24 mt-20 px-4"
+      className="testimonial-section bg-[#487cec] text-white py-8 md:py-12 mt-20 px-4"
     >
       <div className="container mx-auto max-w-6xl">
         <div className="w-full md:w-2/3 lg:max-w-lg mx-auto">
@@ -54,7 +54,7 @@ const Testimonial20 = () => {
             variants={headingAnimation}
             initial="hidden"
             whileInView="visible" 
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.5 }}
           >
             What Our Clients Say
           </motion.h2>
@@ -64,7 +64,7 @@ const Testimonial20 = () => {
           variants={paragraphAnimation}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: false, amount: 0.5 }} 
+          viewport={{ once: true, amount: 1 }} 
         >
           Assumenda non repellendus distinctio nihil dicta sapiente, quibusdam
           maiores, illum at, aliquid blanditiis eligendi qui.

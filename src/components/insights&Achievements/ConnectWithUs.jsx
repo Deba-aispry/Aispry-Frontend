@@ -35,8 +35,8 @@ const cardsData = [
 
 const ConnectWithUs = () => {
   return (
-    <div>
-      <div className="text-white p-8 max-w-6xl container mx-auto">
+  
+      <div className="text-white p-8 max-w-6xl container mx-auto mt-8">
         {/* Header */}
         <motion.div
           className="text-center mb-2"
@@ -45,7 +45,7 @@ const ConnectWithUs = () => {
           viewport={{ once: false }}
           transition={{ duration: 0.8 }}
         >
-          <h3 className="text-4xl font-bold text-orange-400">
+          <h3 className="text-4xl font-bold text-white">
             Connect with Us Beyond the Screen
           </h3>
         </motion.div>
@@ -82,7 +82,7 @@ const ConnectWithUs = () => {
           ))}
         </div>
       </div>
-    </div>
+ 
   );
 };
 

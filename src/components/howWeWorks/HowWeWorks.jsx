@@ -39,7 +39,7 @@ const HowWeWorks = () => {
             className="text-5xl font-semibold"
             initial={{ x: -200, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.5 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
             How We Work
@@ -48,7 +48,7 @@ const HowWeWorks = () => {
             className="mt-4 text-xl font-semibold"
             initial={{ y: 50, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 1 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
           >
             We collaborate closely with you to understand your business

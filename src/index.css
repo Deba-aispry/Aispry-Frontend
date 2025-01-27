@@ -5,6 +5,7 @@
 body {
   background: #00001c;
   font-family: "Barlow", sans-serif;
+  scroll-behavior: smooth;
 }
 /* f4f6f7 */
 .custom-bg {
@@ -68,4 +69,3 @@ body {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
-
