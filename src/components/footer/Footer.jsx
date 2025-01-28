@@ -1,59 +1,64 @@
 import React from "react";
 import CopyRigthFooter from "./CopyRightFooter";
 import footerLogo from "../../assets/homePage/footerlogo.webp";
-import {
-  FaFacebookF,
-  FaXTwitter,
-  FaLinkedinIn,
-  FaYoutube,
-} from "react-icons/fa6";
+
+import map from "../../assets/footer/map.png";
+import linkedIn from "../../assets/footer/linkedIn.png";
+import linkedInLogo from "../../assets/footer/linkedInLogo.png";
 
 const Footer = () => {
   return (
     <footer className="bg-gray-100 mt-10">
-      <div className="container mx-auto my-4 py-10 grid grid-cols-1 md:grid-cols-2 gap-8 md:w-[75%]">
+      <div className="container mx-auto my-4 py-10 grid grid-cols-1 md:grid-cols-2 md:w-[75%]">
         <div className="flex flex-col items-center md:items-start text-center md:text-left">
           <img
             src={footerLogo}
             alt="AiSPRY Logo"
             className="w-40 h-auto mb-4"
           />
-          <p className="text-gray-600 text-md leading-relaxed">
-            AiSPRY does not leave behind even the slowest of learners by
-            providing instant responses to students’ queries. Acting as an
-            AI-Tutor, it offers responses to both text and speech queries.
-          </p>
+
+          <div className="mt-14 flex justify-between space-x-4">
+            <div>
+              <div className="text-sm">
+                <span className="font-semibold text-md">Hyderabad:</span>{" "}
+                2-56/2/19, 3rd Floor, Vijaya Towers, Ayyappa Society
+                Road,Madhapur, Hyderabad, Telangana 500081
+              </div>
+              <div className="mt-2 text-sm">
+                <span className="text-md font-semibold">Bengaluru:</span> 23,
+                2nd Floor, 9th Main Road, 22nd Cross Road,7th Sector, HSR
+                LayouNo, t Bengaluru, Karnataka 560102
+              </div>
+              <div className="mt-2 text-sm">
+                <span className="text-md font-semibold">Chennai: No:</span> 1,
+                1st Lane, Nungambakkam High Road, 1st Floor,Shantiram Center,
+                Nungambakkam, Chennai, Tamil Nadu 600034
+              </div>
+            </div>
+
+            <div className="flex flex-col items-center mt-4 pl-8">
+              <a
+                href="https://www.linkedin.com/company/aispry/posts/?feedView=all"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src={linkedIn} alt="linkedin" className="w-48" />
+                <img src={linkedInLogo} alt="linkedinlogo" className="w-12 md:ml-8 mt-2" />
+              </a>
+            </div>
+          </div>
         </div>
 
-        <div className="flex flex-col items-center md:ml-52">
-          <h4 className="text-lg font-semibold mb-4 ">Follow Us!</h4>
-          <div className="flex space-x-4 mb-6 ">
-            <a href="#" aria-label="Facebook" className="text-blue-500">
-              <FaFacebookF size={22} />
-            </a>
-            <a href="#" aria-label="Twitter" className="text-gray-800">
-              <FaXTwitter size={22} />
-            </a>
-            <a
-              href="#"
-              aria-label="LinkedIn"
-              className="text-blue-800 transition"
-            >
-              <FaLinkedinIn size={22} />
-            </a>
-            <a href="#" aria-label="YouTube" className="text-red-500">
-              <FaYoutube size={22} />
-            </a>
+        <div className="flex flex-col justify-between items-center">
+          <div>
+            <img src={map} alt="map" className="w-full h-64" />
           </div>
-          <h4 className=" text-lg font-semibold">
-            Reach Us:{" "}
-            <a
-              href="mailto:info@aispry.com"
-              className="text-gray-600 hover:text-orange-400 text-md"
-            >
-              info@aispry.com
-            </a>
-          </h4>
+          <div className="text-sm ">
+            <p>AiSPRY has a global footprint in countries such as</p>
+            <span className="md:ml-14">
+              India | Malaysia | USA | UK | Australia
+            </span>
+          </div>
         </div>
       </div>
       <CopyRigthFooter />

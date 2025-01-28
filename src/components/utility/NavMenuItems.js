@@ -1,12 +1,14 @@
+// import { path } from "framer-motion/client";
+
 export const NavMenuItems = [
   {
     label: "AI Solutions",
     submenu: [
-      { name: "Machine Learning" },
-      { name: "Natural Language Processing" },
-      { name: "Computer Vision" },
-      { name: "Predictive Analytics" },
-      { name: "Custom AI Development" },
+      { name: "Machine Learning", id: "ml" , path:"/ai-solutions"},
+      { name: "Natural Language Processing", id: "nlp" , path:"/ai-solutions"},
+      { name: "Computer Vision", id: "cv" , path:"/ai-solutions"},
+      { name: "Predictive Analytics", id: "pa", path:"/ai-solutions" },
+      { name: "Custom AI Development", id: "custom", path:"/ai-solutions" },
     ],
   },
   {
@@ -23,14 +25,14 @@ export const NavMenuItems = [
     ],
   },
  
-  {
-    label: "Resources",
-    submenu: [
-      { name: "Case Studies" },
-      { name: "White Papers" },
-      { name: "Webinars" },
-      { name: "Blog" },
-      { name: "FAQs" },
-    ],
-  },
+  // {
+  //   label: "Resources",
+  //   submenu: [
+  //     { name: "Case Studies" },
+  //     { name: "White Papers" },
+  //     { name: "Webinars" },
+  //     { name: "Blog" },
+  //     { name: "FAQs" },
+  //   ],
+  // },
 ];

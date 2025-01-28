@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { howWeWorksData } from "../utility/howWeWorksData";
-import { FaCheckCircle } from "react-icons/fa";
+import { IoMdCheckmarkCircleOutline } from "react-icons/io";
+
 
 const HowWeWorks = () => {
   const [animatedCards, setAnimatedCards] = useState(new Set());
@@ -81,7 +82,7 @@ const HowWeWorks = () => {
               </h3>
               {step?.description.map((item, key) => (
                 <div key={key} className="flex items-center">
-                  <FaCheckCircle className="text-2xl mr-3 rounded-full bg-gradient-to-r from-[#ef8e38] to-[#108dc7]" />
+                  <IoMdCheckmarkCircleOutline className="text-2xl mr-3 rounded-full text-blue-500" />
                   <span className="text-black my-2 text-lg">{item}</span>
                 </div>
               ))}

@@ -1,8 +1,8 @@
 import React from "react";
 import Slider from "react-slick";
-import thirdVideo from "../../assets/videos/video1.mp4";
-import secondVideo from "../../assets/videos/video2.mp4";
-import firstVideo from "../../assets/videos/firstVideo.mp4";
+import thirdVideo from "../../assets/videos/abcd.mp4";
+import secondVideo from "../../assets/videos/efgh.mp4";
+import firstVideo from "../../assets/videos/ijkl.mp4";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -67,7 +67,7 @@ const VideoCarousel = () => {
         </div>
         <div className="relative">
           <video
-            className="w-full h-auto"
+            className="w-auto h-full"
             muted
             loop
             autoPlay

@@ -1,44 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FiArrowRight } from "react-icons/fi";
-import cement from "../../../../assets/projectImage/cement.jpg";
-import windenergy from "../../../../assets/projectImage/windenergy.jpg";
-import optimization from "../../../../assets/projectImage/optimization.webp";
+import { projectInsightsData } from "../../../utility/projectData/projectInsightsData";
+
 
 const ProjectInsights = () => {
-  const cards = [
-    {
-      title: "Machine Failure with ML",
-      description:
-        "Use machine learning algorithms to predict and prevent unexpected machine failures in the manufacturing industry. This helps reduce costs and improve efficiency.",
-      image: cement,
-    },
-    {
-      title: "Cement Manufacturing Automation",
-      description:
-        "Streamline production processes with cutting-edge automation systems designed for the cement industry, ensuring high precision and lower downtime.",
-      image: windenergy,
-    },
-    {
-      title: "Optimization of Machine Downtime",
-      description:
-        "Leverage advanced analytics and predictive maintenance to minimize machine downtime and maximize productivity across the board.",
-      image: optimization,
-    },
-    {
-      title: "BBS Extraction",
-      description:
-        "Efficiently extract and analyze BBS data for improved decision-making in industrial operations, ensuring optimized workflows.",
-      image: cement,
-    },
-    {
-      title: "Wind Turbine Failure",
-      description:
-        "Enhance the reliability of wind turbines by predicting potential failures and addressing issues with data-driven insights and predictive analytics.",
-      image: windenergy,
-    },
-  ];
-
   return (
     <div className="py-12 px-6 md:px-16 max-w-7xl mx-auto text-white">
       <motion.div
@@ -51,7 +17,7 @@ const ProjectInsights = () => {
         </h1>
       </motion.div>
       <div className="flex flex-col gap-16">
-        {cards.map((card, index) => (
+        {projectInsightsData.map((card, index) => (
           <motion.div
             key={index}
             className={`flex flex-col md:flex-row items-center gap-8 ${
@@ -74,11 +40,12 @@ const ProjectInsights = () => {
               <motion.img
                 src={card.image}
                 alt={card.title}
-                className="w-full h-64 md:h-80 object-cover"
+                className="w-full h-80 md:h-96 object-cover"
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true, amount: 0.5 }}
                 transition={{ duration: 0.8, delay: index * 0.2 }}
+                loading="lazy"
               />
             </motion.div>
 

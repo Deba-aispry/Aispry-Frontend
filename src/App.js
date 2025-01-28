@@ -9,7 +9,8 @@ import "react-tooltip/dist/react-tooltip.css";
 import Navbar from "./components/navbar/Navbar";
 import Homepage from "./components/home/HomeIndex";
 import AboutUs from "./components/aboutUs/AboutUs";
-
+import AiSolutions from "./components/aiSolutions/AiSolutions";
+import ResourceIndex from "./components/resources/ResourceIndex";
 import Ecommerce from "./components/industryApplications/ecommerce/Ecommerce";
 import Energy from "./components/industryApplications/enegry/Energy";
 import Esg from "./components/industryApplications/esg/Esg";
@@ -53,6 +54,8 @@ function App() {
           <Route path="/industry/transportation" element={<Transportation />} />
           <Route path="/how-we-works" element={<HowWeWorksDetails />} />
           <Route path="/about-us" element={<AboutUs />} />
+          <Route path="/ai-solutions" element={<AiSolutions />} />
+          <Route path="/resources" element={<ResourceIndex />} />
         </Routes>
         <Footer />
         <ScrollToTopButton />

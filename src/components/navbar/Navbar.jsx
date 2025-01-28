@@ -63,6 +63,10 @@ const Navbar = () => {
               </div>
             ))}
             <button className="text-lg font-medium px-3 py-2 rounded-md transition duration-300 transform 
+            hover:text-[#f48220] hover:scale-110" onClick={() => navigate("/resources")}>
+              Resources
+            </button>
+            <button className="text-lg font-medium px-3 py-2 rounded-md transition duration-300 transform 
             hover:text-[#f48220] hover:scale-110" onClick={() => navigate("/how-we-works")}>
               How We Work
             </button>
