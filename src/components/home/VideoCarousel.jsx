@@ -1,8 +1,8 @@
 import React from "react";
 import Slider from "react-slick";
-import thirdVideo from "../../assets/videos/abcd.mp4";
-import secondVideo from "../../assets/videos/efgh.mp4";
-import firstVideo from "../../assets/videos/ijkl.mp4";
+import thirdVideo from "../../assets/videos/thirdVideo.mp4";
+import secondVideo from "../../assets/videos/secondVideo.mp4";
+import firstVideo from "../../assets/videos/firstVideo.mp4";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
