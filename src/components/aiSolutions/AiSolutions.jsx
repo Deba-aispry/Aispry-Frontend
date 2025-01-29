@@ -39,7 +39,7 @@ const AiSolutions = () => {
 
   return (
     <>
-      {/* Sticky Header */}
+     
       <div className="sticky top-28 z-20 bg-[#0066b1] text-white shadow-md">
         <div className="max-w-6xl mx-auto flex items-center space-x-6 p-2">
           {AiSolutionsData.map((section) => (
@@ -58,7 +58,7 @@ const AiSolutions = () => {
         </div>
       </div>
 
-      {/* Sections */}
+      
       <div>
         {AiSolutionsData.map((section) => (
           <Section key={section.id} section={section} />
@@ -72,7 +72,7 @@ const Section = ({ section }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
-  // Header Animation
+ 
   const headerVariants = {
     hidden: { opacity: 0, x: -600 },
     visible: { opacity: 1, x: 0, transition: { duration: 0.8, ease: "easeOut" } },
@@ -83,18 +83,18 @@ const Section = ({ section }) => {
     hidden: {},
     visible: {
       transition: {
-        staggerChildren: 0.1, // Slightly faster staggering for smoother appearance
+        staggerChildren: 0.1, 
       },
     },
   };
 
-  // Individual Card Animation
+  
   const cardVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.6, ease: "easeOut" }, // Smooth easing
+      transition: { duration: 0.6, ease: "easeOut" }, 
     },
   };
 
@@ -107,14 +107,14 @@ const Section = ({ section }) => {
       animate={isInView ? "visible" : "hidden"}
       variants={cardsContainerVariants}
     >
-      {/* Header Animation */}
+     
       <motion.div variants={headerVariants} className="text-center my-14">
         <h2 className="text-5xl font-semibold mb-4 text-white">
           {section.title}
         </h2>
       </motion.div>
 
-      {/* Cards Animation */}
+    
       <motion.div
         className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
         variants={cardsContainerVariants}
@@ -128,6 +128,7 @@ const Section = ({ section }) => {
             <img
               src={card.imageSrc}
               alt={card.title}
+              loading="lazy"
               className="w-full h-60 object-cover mb-4 rounded-lg transform transition-transform duration-500 group-hover:scale-105"
             />
             <h3 className="text-xl font-semibold mb-2">{card.title}</h3>

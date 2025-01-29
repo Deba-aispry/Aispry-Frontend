@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../projectHeader/Header";
 import ForecastingInventry from "./topicDetails/ForecastingInventry";
 import MachineFailure from "./topicDetails/MachineFailure";
@@ -6,6 +6,7 @@ import CementManufacture from "./topicDetails//CementManufacture";
 import Optimization from "./topicDetails/Optimization";
 import BBSExtraction from "./topicDetails/BBSExtraction";
 import WindTurbineFailure from "./topicDetails/WindTurbineFailure";
+import ProjectInsights from "./topicDetails/ProjectInsights";
 
 const Manufacturing = () => {
   const topics = [
@@ -29,7 +30,9 @@ const Manufacturing = () => {
   };
 
   const [selectedTopic, setSelectedTopic] = useState(topics[0]);
-
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [selectedTopic]);
   return (
     <>
       <Header
@@ -40,6 +43,7 @@ const Manufacturing = () => {
       <div className="mt-20">
         {topicComponents[selectedTopic] || <p>No details available.</p>}
       </div>
+      <ProjectInsights  onTopicClick={(topic) => setSelectedTopic(topic)} />
     </>
   );
 };

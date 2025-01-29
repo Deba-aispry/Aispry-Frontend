@@ -4,7 +4,7 @@ import { FiArrowRight } from "react-icons/fi";
 import { projectInsightsData } from "../../../utility/projectData/projectInsightsData";
 
 
-const ProjectInsights = () => {
+const ProjectInsights = ({onTopicClick}) => {
   return (
     <div className="py-12 px-6 md:px-16 max-w-7xl mx-auto text-white">
       <motion.div
@@ -64,6 +64,7 @@ const ProjectInsights = () => {
                   backgroundPosition: "100% 0",
                   transition: { duration: 0.8 },
                 }}
+                onClick={() => onTopicClick(card.title)}
               >
                 Read More <FiArrowRight className="ml-2 text-lg" />
               </motion.button>

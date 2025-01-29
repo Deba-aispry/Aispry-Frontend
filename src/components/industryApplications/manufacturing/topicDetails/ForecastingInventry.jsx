@@ -1,12 +1,12 @@
 import React from "react";
 
-import { objectives } from "../../../utility/projectData/manufactureData/objectivesData";
-import { constraints } from "../../../utility/projectData/manufactureData/constraintsData";
-import { successCriteria } from "../../../utility/projectData/manufactureData/SuccessCriteriaData";
-import { businessBenefits } from "../../../utility/projectData/manufactureData/businessBenefit";
-import { ProblemStatement } from "../../../utility/projectData/manufactureData/problemStatement";
+import { objectives } from "../../../utility/projectData/manufactureData/forcastingSteelRod/objectivesData";
+import { constraints } from "../../../utility/projectData/manufactureData/forcastingSteelRod/constraintsData";
+import { successCriteria } from "../../../utility/projectData/manufactureData/forcastingSteelRod/SuccessCriteriaData";
+import { businessBenefits } from "../../../utility/projectData/manufactureData/forcastingSteelRod/businessBenefit";
+import { ProblemStatement } from "../../../utility/projectData/manufactureData/forcastingSteelRod/problemStatement";
 import ProjectDetailsPage from "./ProjectDetailsPage";
-import ProjectInsights from "./ProjectInsights";
+// import ProjectInsights from "./ProjectInsights";
 
 import steelImage from "../../../../assets/projectImage/steelImage.jpeg";
 
@@ -26,7 +26,7 @@ const ForecastingInventory = () => {
           ProblemStatement={ProblemStatement}
         />
       </div>
-      <ProjectInsights />
+      {/* <ProjectInsights /> */}
     </>
   );
 };
