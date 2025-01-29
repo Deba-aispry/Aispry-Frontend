@@ -102,7 +102,7 @@ const Section = ({ section }) => {
     <motion.div
       id={section.id}
       ref={ref}
-      className="flex flex-col items-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+      className="flex flex-col mb-14 items-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
       variants={cardsContainerVariants}

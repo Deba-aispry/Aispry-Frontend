@@ -14,7 +14,7 @@ const AiInActions = () => {
       <div className="absolute inset-0 bg-[#487cec] bg-opacity-100 z-10"></div>
 
       <div className="relative z-20 text-center mt-12 header-animation">
-        <h1 className="text-5xl font-semibold  text-white mb-4">AI In Actions</h1>
+        <h1 className="text-5xl font-semibold  text-white mb-4">AI Solutions</h1>
         <p className="text-white text-xl font-semibold max-w-3xl mx-auto">
           Redefine the way you do business with our cutting-edge AI Solutions.
           From revolutionizing customer experiences to unlocking the power of

@@ -10,7 +10,7 @@ import ProjectDetailsPage from "./ProjectDetailsPage";
 import bbsExtraction from "../../../../assets/projectImage/bbsExtraction.png";
 
 const BBSExtraction = () => {
-  const headerTitle = "BBS Extraction";
+  const headerTitle = "BBS Data Extraction";
   return (
     <>
       <div className=" text-white p-4 container max-w-6xl mx-auto">

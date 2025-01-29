@@ -8,8 +8,8 @@ import linkedInLogo from "../../assets/footer/linkedInLogo.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-100 mt-10">
-      <div className="container mx-auto my-4 py-10 grid grid-cols-1 md:grid-cols-2 md:w-[75%]">
+    <footer className="bg-gray-100">
+      <div className="container mx-auto py-10 grid grid-cols-1 md:grid-cols-2 md:w-[75%]">
         <div className="flex flex-col items-center md:items-start text-center md:text-left">
           <img
             src={footerLogo}

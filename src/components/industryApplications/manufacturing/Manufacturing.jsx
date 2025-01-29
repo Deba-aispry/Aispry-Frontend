@@ -10,23 +10,21 @@ import ProjectInsights from "./topicDetails/ProjectInsights";
 
 const Manufacturing = () => {
   const topics = [
-    "Forecasting Inventory of Steel Rods",
-    "Machine Failure with ML",
-    "Cement Manufacturing Automation",
-    "Optimization of Machine Downtime",
-    "BBS Extraction",
-    "Wind Turbine Failure",
+    "Inventory Forecasting",
+    "Predictive Maintenance for Machines",
+    "Smart Automation in Cement Production",
+    "Minimizing Machine Downtime",
+    "BBS Data Extraction",
+    "Wind Turbine Failure Prediction",
   ];
 
-
-
   const topicComponents = {
-    "Forecasting Inventory of Steel Rods": <ForecastingInventry />,
-    "Machine Failure with ML": <MachineFailure />,
-    "Cement Manufacturing Automation": <CementManufacture />,
-    "Optimization of Machine Downtime": <Optimization />,
-    "BBS Extraction": <BBSExtraction />,
-    "Wind Turbine Failure": <WindTurbineFailure />,
+    "Inventory Forecasting": <ForecastingInventry />,
+    "Predictive Maintenance for Machines": <MachineFailure />,
+    "Smart Automation in Cement Production": <CementManufacture />,
+    "Minimizing Machine Downtime": <Optimization />,
+    "BBS Data Extraction": <BBSExtraction />,
+    "Wind Turbine Failure Prediction": <WindTurbineFailure />,
   };
 
   const [selectedTopic, setSelectedTopic] = useState(topics[0]);
@@ -43,7 +41,7 @@ const Manufacturing = () => {
       <div className="mt-20">
         {topicComponents[selectedTopic] || <p>No details available.</p>}
       </div>
-      <ProjectInsights  onTopicClick={(topic) => setSelectedTopic(topic)} />
+      <ProjectInsights onTopicClick={(topic) => setSelectedTopic(topic)} />
     </>
   );
 };

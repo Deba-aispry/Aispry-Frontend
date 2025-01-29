@@ -1,7 +1,7 @@
 import React from "react";
 
 import CarouselComponent from "./Carousel";
-import Testimonial20 from "../testimonials/Testimonial20";
+// import Testimonial20 from "../testimonials/Testimonial20";
 import HowWeWorks from "../howWeWorks/HowWeWorks";
 import Awards from "./Awards";
 
@@ -17,7 +17,7 @@ const HomeIndex = () => {
       <CarouselComponent />
       <HowWeWorks />
       <Achievements />
-      <Testimonial20 />
+      {/* <Testimonial20 /> */}
       <Awards />
     </>
   );

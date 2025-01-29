@@ -14,10 +14,11 @@ const Header = ({ topics, onTopicClick, selectedTopic }) => {
               hover:text-orange-500`}
           >
             <div
-              data-tooltip-id={`tooltip-${index}`}
-              data-tooltip-content={topic}
+              // data-tooltip-id={`tooltip-${index}`}
+              // data-tooltip-content={topic}
             >
-              {topic.length > 20 ? `${topic.slice(0, 18)}...` : topic}
+              {/* {topic.length > 20 ? `${topic.slice(0, 18)}...` : topic} */}
+              {topic}
             </div>
             <Tooltip
               id={`tooltip-${index}`}

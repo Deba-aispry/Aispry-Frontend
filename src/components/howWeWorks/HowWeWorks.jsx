@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { howWeWorksData } from "../utility/howWeWorksData";
 import { IoMdCheckmarkCircleOutline } from "react-icons/io";
-
+import howweworkimage from "../../assets/projectImage/howwework.png";
 
 const HowWeWorks = () => {
   const [animatedCards, setAnimatedCards] = useState(new Set());
@@ -33,10 +33,11 @@ const HowWeWorks = () => {
   }, []);
 
   return (
-    <div className="h-screen overflow-y-scroll hide-scrollbar mb-20  bg-[#487cec] text-white ">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 max-w-6xl mx-auto py-16">
-        <div className="sticky md:top-20 mr-6 self-start">
-        <motion.h2
+    <div className="h-screen overflow-y-scroll hide-scrollbar mb-20 bg-[#487cec] text-white">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto py-16">
+        {/* Left Section (Text + Image) */}
+        <div className="sticky md:top-20 flex flex-col space-y-6 self-start">
+          <motion.h2
             className="text-5xl font-semibold"
             initial={{ x: -200, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
@@ -46,7 +47,7 @@ const HowWeWorks = () => {
             How We Work
           </motion.h2>
           <motion.p
-            className="mt-4 text-xl font-semibold"
+            className="text-xl font-semibold"
             initial={{ y: 50, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true, amount: 1 }}
@@ -56,14 +57,26 @@ const HowWeWorks = () => {
             challenges, design tailored AI solutions, and ensure long-term
             measurable success.
           </motion.p>
+
+          {/* Image with Animation */}
+          <motion.img
+            src={howweworkimage}
+            alt="How We Work"
+            className="rounded-lg shadow-lg w-auto h-2/3"
+            initial={{ scale: 0.8, opacity: 0 }}
+            whileInView={{ scale: 1, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
+          />
         </div>
 
+        
         <div>
           {howWeWorksData.map((step) => (
             <motion.div
               key={step.id}
               id={step.id}
-              className="card relative bg-white shadow-lg rounded-lg py-6 px-4 mt-6"
+              className="card relative bg-white shadow-lg rounded-lg py-6 px-6 mt-6"
               initial={{ opacity: 0, rotateX: -90 }}
               animate={
                 animatedCards.has(String(step.id))
@@ -73,10 +86,10 @@ const HowWeWorks = () => {
               transition={{
                 type: "spring",
                 stiffness: 100,
-                damping: 20,
+                damping: 30,
               }}
             >
-              <div className="absolute top-0 right-0 w-6 bg-[#ef8e38] h-full "></div>
+              <div className="absolute top-0 right-0 w-6 bg-[#ef8e38] h-full"></div>
               <h3 className="text-3xl font-semibold text-center mt-2 mb-4 text-black">
                 {step.title}
               </h3>

@@ -10,7 +10,7 @@ import ProjectDetailsPage from "./ProjectDetailsPage";
 import windturbine from "../../../../assets/projectImage/windTurbine.png";
 
 const WindTurbineFailure = () => {
-  const headerTitle = "Wind Turbine Failure";
+  const headerTitle = "Wind Turbine Failure Prediction";
   return (
     <>
       <div className=" text-white p-4 container max-w-6xl mx-auto">

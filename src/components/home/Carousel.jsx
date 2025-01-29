@@ -46,7 +46,7 @@ const headerVariants = {
 
 const paragraphVariants = {
   hidden: { opacity: 0, x: -100 },
-    visible: { opacity: 1, x: 0, transition: { duration: 0.8 } },
+  visible: { opacity: 1, x: 0, transition: { duration: 0.8 } },
 };
 
 const CarouselComponent = () => {
@@ -65,7 +65,7 @@ const CarouselComponent = () => {
           className="text-5xl font-semibold text-white text-center"
           variants={headerVariants}
         >
-          AI Solutions
+          Industry Applications
         </motion.h1>
         <motion.p
           className="text-white py-4 text-center md:text-xl font-semibold md:text-center mx-4"
@@ -74,10 +74,9 @@ const CarouselComponent = () => {
           whileInView="visible"
           viewport={{ once: true, amount: 1 }}
         >
-          Redefine the way you do business with our cutting-edge AI Solutions.
-          From revolutionizing customer experiences to unlocking the power of
-          predictive insights, we help you innovate and lead in a competitive
-          world.
+          Empowering businesses across industries with cutting-edge AI solutions
+          tailored to ensure operational excellence, safety, sustainability, and
+          innovation. Explore how we transform challenges into opportunities.
         </motion.p>
       </motion.div>
 

@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
-
 const ProjectDetailsPage = ({
   headerImage,
   headerTitle,
@@ -14,7 +13,6 @@ const ProjectDetailsPage = ({
   const [activeSection, setActiveSection] = useState("Problem Statement");
   const [scrollProgress, setScrollProgress] = useState(0);
 
-  
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
@@ -30,7 +28,6 @@ const ProjectDetailsPage = ({
     };
   }, []);
 
-  
   const sections = {
     "Problem Statement": ProblemStatement,
     Objectives: objectives,
@@ -40,14 +37,14 @@ const ProjectDetailsPage = ({
   };
 
   return (
-    <div className="container max-w-7xl mx-auto ">
+    <div className="container max-w-7xl mx-auto mb-4">
       <motion.div
         className="fixed top-28 left-0 h-2 bg-gradient-to-r from-blue-600 to-orange-400 z-40"
         style={{
           width: `${scrollProgress}%`,
         }}
       />
-      
+
       <div className="flex flex-col md:flex-row items-center md:space-y-0 md:space-x-8">
         <img
           src={headerImage}
@@ -57,21 +54,17 @@ const ProjectDetailsPage = ({
         />
 
         <motion.div
-          initial={{ x: -300, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
+          initial={{ y: -200, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <h3 className="text-5xl font-semibold leading-snug mb-4">
-           {headerTitle}
-          </h3>
+          <h3 className="text-5xl leading-sung mb-4">{headerTitle}</h3>
         </motion.div>
       </div>
 
-      
-      <div className="flex my-14">
-       
+      <div className="flex mt-10">
         <motion.aside
-          className="w-1/4 rounded-lg shadow-lg"
+          className="w-1/5 rounded-lg shadow-lg"
           initial={{ x: -400 }}
           animate={{ x: 0 }}
           transition={{ duration: 0.5 }}
@@ -85,8 +78,8 @@ const ProjectDetailsPage = ({
                 key={section}
                 className={`cursor-pointer text-lg font-semibold p-3 rounded-md ${
                   activeSection === section
-                    ? "bg-blue-600 text-white"
-                    : "text-gray-300 hover:bg-gray-700 hover:text-white"
+                    ? "text-[#ef8e38]"
+                    : "text-white  hover:text-[#108dc7]"
                 }`}
                 onClick={() => setActiveSection(section)}
               >
@@ -97,7 +90,7 @@ const ProjectDetailsPage = ({
         </motion.aside>
 
         <main className="w-3/4 mt-12">
-          <div className="mb-6 pl-4">
+          <div className="mb-6 pl-8">
             {sections[activeSection].map((item, index) => (
               <div key={index} className="border-gray-300 py-4">
                 <h4 className="text-xl font-semibold text-white">
