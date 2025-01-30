@@ -9,6 +9,7 @@ import ProjectDetailsPage from "./ProjectDetailsPage";
 
 import machine from "../../../../assets/projectImage/machine.png";
 
+
 const MachineFailure = () => {
   const headerTitle = " Predictive Maintenance for machines";
   return (
@@ -22,6 +23,7 @@ const MachineFailure = () => {
           successCriteria={successCriteria}
           businessBenefits={businessBenefits}
           ProblemStatement={ProblemStatement}
+          
         />
       </div>
     </>

@@ -8,6 +8,7 @@ import { ProblemStatement } from "../../../utility/projectData/healthCareData/ph
 import ProjectDetailsPage from "../../manufacturing/topicDetails/ProjectDetailsPage";
 
 import pharmabot from "../../../../assets/projectImage/pharmabot.png";
+import pharmaArch from "../../../../assets/architecture/phrmabotarchitecture.png"
 
 const Oocyte = () => {
   const headerTitle =
@@ -23,6 +24,7 @@ const Oocyte = () => {
           successCriteria={successCriteria}
           businessBenefits={businessBenefits}
           ProblemStatement={ProblemStatement}
+          architecture={pharmaArch}
         />
       </div>
     </>

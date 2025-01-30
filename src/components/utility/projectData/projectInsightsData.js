@@ -3,8 +3,15 @@ import windenergy from "../../../assets/projectImage/windTurbine.png";
 import optimization from "../../../assets/projectImage/optimization.webp";
 import bbsExtraction from "../../../assets/projectImage/bbsExtraction.png";
 import machine from "../../../assets/projectImage/machine.png";
+import steelImg from "../../../assets/projectImage/steelImg.jpg";
 
 export const projectInsightsData = [
+  {
+    title: "Inventory Forecasting",
+    description:
+      "The steel manufacturing and distribution industry requires meticulous inventory management, especially with steel rods. Traditional manual counting and diameter measurement methods are both tedious and prone to human error, which can cause operational inefficiencies.",
+    image: steelImg,
+  },
   {
     title: "Predictive Maintenance for Machines",
     description:
@@ -12,7 +19,7 @@ export const projectInsightsData = [
     image: machine,
   },
   {
-    title: "Cement Manufacturing Automation",
+    title: "Smart Automation in Cement Production",
     description:
       "A leading cement manufacturer struggles with manual quality inspections causing inefficiencies and wastage. Automated quality checks streamline processes, reduce waste, and ensure consistent product quality, enhancing productivity and competitiveness.",
     image: cement,

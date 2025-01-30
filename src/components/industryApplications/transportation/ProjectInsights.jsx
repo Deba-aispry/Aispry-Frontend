@@ -3,8 +3,11 @@ import { motion } from "framer-motion";
 import { FiArrowRight } from "react-icons/fi";
 import { projectInsightsData } from "../../utility/projectData/transportationData/projectInsightsData";
 
+const ProjectInsights = ({ onTopicClick, selectedTopic }) => {
+  const topictoShow = projectInsightsData.filter(
+    (topic) => topic.title !== selectedTopic
+  );
 
-const ProjectInsights = ({onTopicClick}) => {
   return (
     <div className="py-12 px-6 md:px-16 max-w-7xl mx-auto text-white">
       <motion.div
@@ -17,7 +20,7 @@ const ProjectInsights = ({onTopicClick}) => {
         </h1>
       </motion.div>
       <div className="flex flex-col gap-16">
-        {projectInsightsData.map((card, index) => (
+        {topictoShow.map((card, index) => (
           <motion.div
             key={index}
             className={`flex flex-col md:flex-row items-center gap-8 ${

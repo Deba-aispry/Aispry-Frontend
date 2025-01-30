@@ -2,8 +2,15 @@ import oocyte from "../../../../assets/projectImage/oocyte.png";
 import autism from "../../../../assets/projectImage/autism.png";
 import pharmabot from "../../../../assets/projectImage/pharmabot.png";
 import medical from "../../../../assets/projectImage/medicalinventory.png";
+import embryo from "../../../../assets/projectImage/embryo.png";
 
 export const projectInsightsData = [
+  {
+    title: "Embryo Viability AI",
+    description:
+      "The world of In Vitro Fertilization (IVF) is delicate, holding significant impact on countless individuals and couples who aspire to have a child. An integral component of this process is the accurate identification and selection of viable embryos. Traditional techniques rely heavily on human judgment, bringing in elements of subjectivity and potential inaccuracies. These inefficiencies can lead to reduced IVF success rates, posing emotional and financial burdens on hopeful parents.",
+    image: embryo,
+  },
   {
     title: "Oocyte Project",
     description:

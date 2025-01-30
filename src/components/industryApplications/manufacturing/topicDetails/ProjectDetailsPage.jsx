@@ -9,6 +9,7 @@ const ProjectDetailsPage = ({
   successCriteria,
   businessBenefits,
   ProblemStatement,
+  architecture,
 }) => {
   const [activeSection, setActiveSection] = useState("Problem Statement");
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -34,6 +35,7 @@ const ProjectDetailsPage = ({
     Constraints: constraints,
     "Success Criteria": successCriteria,
     "Business Benefits": businessBenefits,
+    ...(architecture ? { Architecture: architecture } : {}),
   };
 
   return (
@@ -79,7 +81,7 @@ const ProjectDetailsPage = ({
                 className={`cursor-pointer text-lg font-semibold p-3 rounded-md ${
                   activeSection === section
                     ? "text-[#ef8e38]"
-                    : "text-white  hover:text-[#108dc7]"
+                    : "text-white hover:text-[#108dc7]"
                 }`}
                 onClick={() => setActiveSection(section)}
               >
@@ -91,14 +93,28 @@ const ProjectDetailsPage = ({
 
         <main className="w-3/4 mt-12">
           <div className="mb-6 pl-8">
-            {sections[activeSection].map((item, index) => (
-              <div key={index} className="border-gray-300 py-4">
-                <h4 className="text-xl font-semibold text-white">
-                  {item?.title}
-                </h4>
-                <p className="text-lg text-gray-300">{item.description}</p>
-              </div>
-            ))}
+            {activeSection === "Architecture"
+              ? architecture && ( 
+                  <div className="border-gray-300 py-4">
+                    <h4 className="text-xl font-semibold text-white">
+                      Architecture
+                    </h4>
+                    <img
+                      src={architecture}
+                      alt="Project Architecture"
+                      className="w-3/4 h-auto rounded-lg shadow-lg mt-5"
+                      loading="lazy"
+                    />
+                  </div>
+                )
+              : sections[activeSection]?.map((item, index) => (
+                  <div key={index} className="border-gray-300 py-4">
+                    <h4 className="text-xl font-semibold text-white">
+                      {item?.title}
+                    </h4>
+                    <p className="text-lg text-gray-300">{item.description}</p>
+                  </div>
+                ))}
           </div>
         </main>
       </div>

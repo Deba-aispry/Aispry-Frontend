@@ -8,6 +8,8 @@ import { ProblemStatement } from "../../../utility/projectData/manufactureData/o
 import ProjectDetailsPage from "./ProjectDetailsPage";
 
 import optimization from "../../../../assets/projectImage/optimization.webp";
+import machineArchi from "../../../../assets/architecture/downtimearchitecture.png"
+
 
 const Optimization = () => {
   const headerTitle = "Optimization of Machine Downtime";
@@ -22,6 +24,7 @@ const Optimization = () => {
           successCriteria={successCriteria}
           businessBenefits={businessBenefits}
           ProblemStatement={ProblemStatement}
+          architecture={machineArchi}
         />
       </div>
     </>

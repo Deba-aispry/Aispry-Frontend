@@ -2,8 +2,15 @@ import volvo from "../../../../assets/projectImage/volvo.png";
 import woodenpallet from "../../../../assets/projectImage/woodenpallet.png";
 import palletcounting from "../../../../assets/projectImage/palletcounting.png";
 import damage from "../../../../assets/projectImage/damage.png";
+import poweredpallet from "../../../../assets/projectImage/poweredpallet.png";
 
 export const projectInsightsData = [
+  {
+    title: "Pallet Damage AI",
+    description:
+      "Effective warehouse management is paramount for supply chain efficiency. Pallets, being fundamental to this, when damaged, can jeopardize the integrity of goods, cause safety concerns, and lead to operational inefficiencies. Automating the detection and classification of pallet damage is crucial in addressing these concerns.",
+    image: poweredpallet,
+  },
   {
     title: "Pallet Damage Classification",
     description:

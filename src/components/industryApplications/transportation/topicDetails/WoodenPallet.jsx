@@ -8,6 +8,7 @@ import { ProblemStatement } from "../../../utility/projectData/transportationDat
 import ProjectDetailsPage from "../../manufacturing/topicDetails/ProjectDetailsPage";
 
 import woodenPallet from "../../../../assets/projectImage/woodenpallet.png";
+import forecastingArch from "../../../../assets/architecture/forecastingarchitecture.png"
 
 const WoodenPallet = () => {
   const headerTitle = "Wooden Pallet Forecasting";
@@ -22,6 +23,7 @@ const WoodenPallet = () => {
           successCriteria={successCriteria}
           businessBenefits={businessBenefits}
           ProblemStatement={ProblemStatement}
+          architecture={forecastingArch}
         />
       </div>
     </>

@@ -9,6 +9,7 @@ import ProjectDetailsPage from "./ProjectDetailsPage";
 
 
 import cementmanufacture from "../../../../assets/projectImage/cementmanufacturing.webp";
+import cementArch from "../../../../assets/architecture/cementarchitecture.jpg"
 
 const CementManufacture = () => {
   const headerTitle = "Cement manufacturing automation";
@@ -23,6 +24,7 @@ const CementManufacture = () => {
           successCriteria={successCriteria}
           businessBenefits={businessBenefits}
           ProblemStatement={ProblemStatement}
+          architecture={cementArch}
         />
       </div>
     

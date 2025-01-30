@@ -8,6 +8,7 @@ import { ProblemStatement } from "../../../utility/projectData/healthCareData/au
 import ProjectDetailsPage from "../../manufacturing/topicDetails/ProjectDetailsPage";
 
 import autism from "../../../../assets/projectImage/autism.png";
+import autismArch from "../../../../assets/architecture/autismarchitecture.png"
 
 const AutismDetection = () => {
   const headerTitle = "Autism Detection";
@@ -22,6 +23,7 @@ const AutismDetection = () => {
           successCriteria={successCriteria}
           businessBenefits={businessBenefits}
           ProblemStatement={ProblemStatement}
+          architecture={autismArch}
         />
       </div>
     </>

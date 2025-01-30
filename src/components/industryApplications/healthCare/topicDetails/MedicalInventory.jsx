@@ -8,6 +8,7 @@ import { ProblemStatement } from "../../../utility/projectData/healthCareData/me
 import ProjectDetailsPage from "../../manufacturing/topicDetails/ProjectDetailsPage";
 
 import medicalinventory from "../../../../assets/projectImage/medicalinventory.png";
+import medicalArch from "../../../../assets/architecture/inventoryarchitecture.png";
 
 const MedicalInventory = () => {
   const headerTitle = "Optimization in Medical Inventory";
@@ -22,6 +23,7 @@ const MedicalInventory = () => {
           successCriteria={successCriteria}
           businessBenefits={businessBenefits}
           ProblemStatement={ProblemStatement}
+          architecture={medicalArch}
         />
       </div>
     </>

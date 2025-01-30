@@ -8,6 +8,7 @@ import { ProblemStatement } from "../../../utility/projectData/transportationDat
 import ProjectDetailsPage from "../../manufacturing/topicDetails/ProjectDetailsPage";
 
 import palletCounting from "../../../../assets/projectImage/palletcounting.png";
+import countingArch from "../../../../assets/architecture/countingarchitecture.png"
 
 const PalletCounting = () => {
   const headerTitle = "Pallet Counting";
@@ -22,6 +23,7 @@ const PalletCounting = () => {
           successCriteria={successCriteria}
           businessBenefits={businessBenefits}
           ProblemStatement={ProblemStatement}
+          architecture={countingArch}
         />
       </div>
     </>

@@ -8,6 +8,7 @@ import { ProblemStatement } from "../../../utility/projectData/healthCareData/em
 import ProjectDetailsPage from "../../manufacturing/topicDetails/ProjectDetailsPage";
 
 import embryo from "../../../../assets/projectImage/embryo.png";
+import embryoArch from "../../../../assets/architecture/embryoarchitecture.png"
 
 const Embryo = () => {
   const headerTitle =
@@ -23,6 +24,7 @@ const Embryo = () => {
           successCriteria={successCriteria}
           businessBenefits={businessBenefits}
           ProblemStatement={ProblemStatement}
+          architecture={embryoArch}
         />
       </div>
     </>

@@ -8,6 +8,7 @@ import { ProblemStatement } from "../../../utility/projectData/ecommerceData/inv
 import ProjectDetailsPage from "../../manufacturing/topicDetails/ProjectDetailsPage";
 
 import textextraction from "../../../../assets/projectImage/textextraction.png";
+import storeArch from "../../../../assets/architecture/storebillsarchitecture.jpg"
 
 const StoreBills = () => {
   const headerTitle = "Text Extraction from Store Bills";
@@ -22,6 +23,7 @@ const StoreBills = () => {
           successCriteria={successCriteria}
           businessBenefits={businessBenefits}
           ProblemStatement={ProblemStatement}
+          architecture={storeArch}
         />
       </div>
     </>

@@ -41,7 +41,7 @@ const Manufacturing = () => {
       <div className="mt-20">
         {topicComponents[selectedTopic] || <p>No details available.</p>}
       </div>
-      <ProjectInsights onTopicClick={(topic) => setSelectedTopic(topic)} />
+      <ProjectInsights onTopicClick={(topic) => setSelectedTopic(topic)} selectedTopic={selectedTopic} />
     </>
   );
 };

@@ -8,6 +8,7 @@ import { ProblemStatement } from "../../../utility/projectData/manufactureData/b
 import ProjectDetailsPage from "./ProjectDetailsPage";
 
 import bbsExtraction from "../../../../assets/projectImage/bbsExtraction.png";
+import bbsArchitecture from "../../../../assets/architecture/extractionarchitecture.png";
 
 const BBSExtraction = () => {
   const headerTitle = "BBS Data Extraction";
@@ -22,6 +23,7 @@ const BBSExtraction = () => {
           successCriteria={successCriteria}
           businessBenefits={businessBenefits}
           ProblemStatement={ProblemStatement}
+          architecture={bbsArchitecture}
         />
       </div>
     </>

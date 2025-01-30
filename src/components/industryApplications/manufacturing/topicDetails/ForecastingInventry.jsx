@@ -9,6 +9,7 @@ import ProjectDetailsPage from "./ProjectDetailsPage";
 
 
 import steelImage from "../../../../assets/projectImage/steelImg.jpg";
+import architecture from "../../../../assets/architecture/steelrodsarchitecture.png"
 
 const ForecastingInventory = () => {
   const headerTitle =
@@ -24,6 +25,7 @@ const ForecastingInventory = () => {
           successCriteria={successCriteria}
           businessBenefits={businessBenefits}
           ProblemStatement={ProblemStatement}
+          architecture={architecture}
         />
       </div>
       
