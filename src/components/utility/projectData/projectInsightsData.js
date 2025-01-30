@@ -1,20 +1,21 @@
-import cement from "../../../assets/projectImage/cement.jpg";
+import cement from "../../../assets/projectImage/cementmanufacturing.webp";
 import windenergy from "../../../assets/projectImage/windTurbine.png";
 import optimization from "../../../assets/projectImage/optimization.webp";
-import bbsExtraction from "../../../assets/projectImage/bbsExtraction.png"
+import bbsExtraction from "../../../assets/projectImage/bbsExtraction.png";
+import machine from "../../../assets/projectImage/machine.png";
 
 export const projectInsightsData = [
   {
     title: "Machine Failure with ML",
     description:
       "PRIMA 13, vital for steel rod processing, faces breakdowns causing production halts and financial losses. Predictive maintenance with machine learning ensures smoother operations, minimizing downtime, reducing costs, and improving delivery timelines.",
-    image: cement,
+    image: machine,
   },
   {
     title: "Cement Manufacturing Automation",
     description:
       "A leading cement manufacturer struggles with manual quality inspections causing inefficiencies and wastage. Automated quality checks streamline processes, reduce waste, and ensure consistent product quality, enhancing productivity and competitiveness.",
-    image: windenergy,
+    image: cement,
   },
   {
     title: "Optimization of Machine Downtime",

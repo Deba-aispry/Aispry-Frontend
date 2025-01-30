@@ -16,12 +16,12 @@ export const NavMenuItems = [
     submenu: [
       { name: "Manufacturing & Industrial", path: "/industry/manufacturing" },
       { name: "Healthcare & Life Sciences",  path: "/industry/healthcare" },
-      { name: "Energy & Utilities", path: "/industry/energy" },
-      { name: "FMCG & Food and Beverage", path: "/industry/fmcg" },
       { name: "Transportation & Logistics", path: "/industry/transportation" },
       { name: "Retail & E-commerce",  path:"/industry/ecommerce" },
-      { name: "Financial Services", path: "/industry/financial" },
-      { name: "ESG", path: "/industry/esg" },
+      { name: "Energy & Utilities", path: "/industry/energy" },
+      // { name: "FMCG & Food and Beverage", path: "/industry/fmcg" },
+      // { name: "Financial Services", path: "/industry/financial" },
+      // { name: "ESG", path: "/industry/esg" },
     ],
   },
  

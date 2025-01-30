@@ -4,6 +4,7 @@ import PalletDamage from "./topicDetails/PalletDamage";
 import ClassificationPallet from "./topicDetails/ClassificationPallet";
 import PalletCounting from "./topicDetails/PalletCounting";
 import WoodenPallet from "./topicDetails/WoodenPallet";
+import Volvo from "./topicDetails/Volvo";
 
 const Transportation = () => {
   const topics = [
@@ -11,6 +12,7 @@ const Transportation = () => {
     "Pallet Damage Classification",
     "Pallet Counting",
     "Wooden Pallet Forecasting",
+    "Volvo"
   ];
 
   const topicComponents = {
@@ -18,6 +20,7 @@ const Transportation = () => {
     "Pallet Damage Classification": <ClassificationPallet />,
     "Pallet Counting": <PalletCounting />,
     "Wooden Pallet Forecasting": <WoodenPallet />,
+    "Volvo": <Volvo />
   };
 
   const [selectedTopic, setSelectedTopic] = useState(topics[0]);
