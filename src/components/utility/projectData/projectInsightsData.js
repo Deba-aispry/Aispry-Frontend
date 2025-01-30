@@ -6,7 +6,7 @@ import machine from "../../../assets/projectImage/machine.png";
 
 export const projectInsightsData = [
   {
-    title: "Machine Failure with ML",
+    title: "Predictive Maintenance for Machines",
     description:
       "PRIMA 13, vital for steel rod processing, faces breakdowns causing production halts and financial losses. Predictive maintenance with machine learning ensures smoother operations, minimizing downtime, reducing costs, and improving delivery timelines.",
     image: machine,
@@ -18,13 +18,13 @@ export const projectInsightsData = [
     image: cement,
   },
   {
-    title: "Optimization of Machine Downtime",
+    title: "Minimizing Machine Downtime",
     description:
       "Unplanned downtime in fuel pump manufacturing hampers productivity and increases costs. Advanced monitoring and optimization techniques improve operational efficiency, reduce delays, and ensure timely order fulfillment in competitive markets.",
     image: optimization,
   },
   {
-    title: "BBS Extraction",
+    title: "BBS Data Extraction",
     description:
       "Manual bar bending schedules in construction lead to errors, delays, and material waste. Automated BBS extraction improves accuracy, reduces costs, and enhances project efficiency, meeting the growing industry demands effectively.",
     image: bbsExtraction,

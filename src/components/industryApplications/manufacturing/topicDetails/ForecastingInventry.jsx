@@ -6,9 +6,9 @@ import { successCriteria } from "../../../utility/projectData/manufactureData/fo
 import { businessBenefits } from "../../../utility/projectData/manufactureData/forcastingSteelRod/businessBenefit";
 import { ProblemStatement } from "../../../utility/projectData/manufactureData/forcastingSteelRod/problemStatement";
 import ProjectDetailsPage from "./ProjectDetailsPage";
-// import ProjectInsights from "./ProjectInsights";
 
-import steelImage from "../../../../assets/projectImage/steelImage.jpeg";
+
+import steelImage from "../../../../assets/projectImage/steelImg.jpg";
 
 const ForecastingInventory = () => {
   const headerTitle =
@@ -26,7 +26,7 @@ const ForecastingInventory = () => {
           ProblemStatement={ProblemStatement}
         />
       </div>
-      {/* <ProjectInsights /> */}
+      
     </>
   );
 };

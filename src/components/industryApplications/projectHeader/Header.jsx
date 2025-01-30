@@ -10,16 +10,12 @@ const Header = ({ topics, onTopicClick, selectedTopic }) => {
             key={index}
             onClick={() => onTopicClick(topic)}
             className={`relative flex items-center text-md font-medium py-2 px-4 cursor-pointer border-r border-gray-300 last:border-none
-              ${selectedTopic === topic ? "text-orange-500" : "text-white"} // Conditional class
+              ${
+                selectedTopic === topic ? "text-orange-500" : "text-white"
+              } // Conditional class
               hover:text-orange-500`}
           >
-            <div
-              // data-tooltip-id={`tooltip-${index}`}
-              // data-tooltip-content={topic}
-            >
-              {/* {topic.length > 20 ? `${topic.slice(0, 18)}...` : topic} */}
-              {topic}
-            </div>
+            <div>{topic}</div>
             <Tooltip
               id={`tooltip-${index}`}
               place="bottom-end"

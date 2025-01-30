@@ -5,6 +5,8 @@ import Oocyte from "./topicDetails/Oocyte";
 import AutismDetection from "./topicDetails/AutismDetection";
 import Pharmabot from "./topicDetails/Pharmabot";
 import MedicalInventory from "./topicDetails/MedicalInventory";
+import ProjectInsights from "./ProjectInsights";
+
 
 const HealthCare = () => {
   const topics = [
@@ -38,6 +40,7 @@ const HealthCare = () => {
       <div className="mt-20">
         {topicComponents[selectedTopic] || <p>No details available.</p>}
       </div>
+      <ProjectInsights onTopicClick={(topic) => setSelectedTopic(topic)} />
     </div>
   );
 };

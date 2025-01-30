@@ -10,8 +10,7 @@ import ProjectDetailsPage from "./ProjectDetailsPage";
 import machine from "../../../../assets/projectImage/machine.png";
 
 const MachineFailure = () => {
-  const headerTitle =
-    " Predictive Maintenance for PRIMA 13: Enhancing Operational Efficiency in Steel Rod Cutting and Bending";
+  const headerTitle = " Predictive Maintenance for machines";
   return (
     <>
       <div className=" text-white p-4 container max-w-6xl mx-auto">

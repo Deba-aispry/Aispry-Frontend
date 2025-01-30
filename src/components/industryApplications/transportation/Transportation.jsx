@@ -5,6 +5,7 @@ import ClassificationPallet from "./topicDetails/ClassificationPallet";
 import PalletCounting from "./topicDetails/PalletCounting";
 import WoodenPallet from "./topicDetails/WoodenPallet";
 import Volvo from "./topicDetails/Volvo";
+import ProjectInsights from "./ProjectInsights";
 
 const Transportation = () => {
   const topics = [
@@ -12,7 +13,7 @@ const Transportation = () => {
     "Pallet Damage Classification",
     "Pallet Counting",
     "Wooden Pallet Forecasting",
-    "Volvo"
+    "Volvo",
   ];
 
   const topicComponents = {
@@ -20,7 +21,7 @@ const Transportation = () => {
     "Pallet Damage Classification": <ClassificationPallet />,
     "Pallet Counting": <PalletCounting />,
     "Wooden Pallet Forecasting": <WoodenPallet />,
-    "Volvo": <Volvo />
+    Volvo: <Volvo />,
   };
 
   const [selectedTopic, setSelectedTopic] = useState(topics[0]);
@@ -38,6 +39,7 @@ const Transportation = () => {
       <div className="mt-20">
         {topicComponents[selectedTopic] || <p>No details available.</p>}
       </div>
+      <ProjectInsights onTopicClick={(topic) => setSelectedTopic(topic)} />
     </div>
   );
 };

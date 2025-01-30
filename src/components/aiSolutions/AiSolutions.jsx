@@ -39,7 +39,6 @@ const AiSolutions = () => {
 
   return (
     <>
-     
       <div className="sticky top-28 z-20 bg-[#0066b1] text-white shadow-md">
         <div className="max-w-6xl mx-auto flex items-center space-x-6 p-2">
           {AiSolutionsData.map((section) => (
@@ -58,7 +57,6 @@ const AiSolutions = () => {
         </div>
       </div>
 
-      
       <div>
         {AiSolutionsData.map((section) => (
           <Section key={section.id} section={section} />
@@ -72,29 +70,30 @@ const Section = ({ section }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
- 
   const headerVariants = {
     hidden: { opacity: 0, x: -600 },
-    visible: { opacity: 1, x: 0, transition: { duration: 0.8, ease: "easeOut" } },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.8, ease: "easeOut" },
+    },
   };
-
 
   const cardsContainerVariants = {
     hidden: {},
     visible: {
       transition: {
-        staggerChildren: 0.1, 
+        staggerChildren: 0.1,
       },
     },
   };
 
-  
   const cardVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.6, ease: "easeOut" }, 
+      transition: { duration: 0.6, ease: "easeOut" },
     },
   };
 
@@ -107,14 +106,12 @@ const Section = ({ section }) => {
       animate={isInView ? "visible" : "hidden"}
       variants={cardsContainerVariants}
     >
-     
       <motion.div variants={headerVariants} className="text-center my-14">
         <h2 className="text-5xl font-semibold mb-4 text-white">
           {section.title}
         </h2>
       </motion.div>
 
-    
       <motion.div
         className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
         variants={cardsContainerVariants}
@@ -133,6 +130,15 @@ const Section = ({ section }) => {
             />
             <h3 className="text-xl font-semibold mb-2">{card.title}</h3>
             <p className="text-md text-gray-300">{card.description}</p>
+            {card?.link && (
+              <a
+                href={card.link}
+                target="blank"
+                className="text-center flex justify-around mt-4 hover:text-[#ef8e38] font-bold "
+              >
+                More Details
+              </a>
+            )}
           </motion.div>
         ))}
       </motion.div>
