@@ -9,32 +9,32 @@ const Achievements = () => {
       </div>
 
       {/* Achievements Section */}
-      <div className="md:w-3/4 grid grid-cols-1 md:grid-cols-3">
+      <div className="md:w-3/4 mx-auto grid grid-cols-1 md:grid-cols-3 mt-8 md:mt-0">
         {/* First Row */}
-        <div className="text-center border-r-2 mb-10">
-          <h3 className="text-5xl font-bold mb-3">170+</h3>
+        <div className="text-center md:border-r-2 mb-10">
+          <h3 className="text-5xl font-bold mb-3">150+</h3>
           <span className="text-xl">Digital Projects</span>
         </div>
-        <div className="text-center border-r-2 mb-10">
+        <div className="text-center md:border-r-2 mb-10">
           <h3 className="text-5xl font-bold mb-3">100+</h3>
           <span className="text-xl">Delighted Customers</span>
         </div>
-        <div className="text-center border-r-2 mb-10">
-          <h3 className="text-5xl font-bold mb-3">5+</h3>
+        <div className="text-center md:border-r-2 mb-10">
+          <h3 className="text-5xl font-bold mb-3">3+</h3>
           <span className="text-xl">Global Locations</span>
         </div>
 
         {/* Second Row */}
-        <div className="text-center border-r-2">
-          <h3 className="text-5xl font-bold mb-3">350+</h3>
+        <div className="text-center md:border-r-2 mb-12">
+          <h3 className="text-5xl font-bold mb-3">270+</h3>
           <span className="text-xl">Domain Specialists</span>
         </div>
-        <div className="text-center border-r-2">
-          <h3 className="text-5xl font-bold mb-3">50+</h3>
+        <div className="text-center md:border-r-2 mb-12">
+          <h3 className="text-5xl font-bold mb-3">25+</h3>
           <span className="text-xl">Advanced Services</span>
         </div>
         <div className="text-center">
-          <h3 className="text-5xl font-bold mb-3">55+</h3>
+          <h3 className="text-5xl font-bold mb-3">48+</h3>
           <span className="text-xl">Managed Services Contracts</span>
         </div>
       </div>

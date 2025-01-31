@@ -39,8 +39,8 @@ const AiSolutions = () => {
 
   return (
     <>
-      <div className="sticky top-28 z-20 bg-[#0066b1] text-white shadow-md">
-        <div className="max-w-6xl mx-auto flex items-center space-x-6 p-2">
+      <div className="sticky top-28 z-30 bg-[#0066b1] text-white shadow-md overflow-auto">
+        <div className="flex max-w-6xl space-x-4 p-2 mx-auto  whitespace-nowrap md:whitespace-normal">
           {AiSolutionsData.map((section) => (
             <a
               key={section.id}

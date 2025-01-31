@@ -33,10 +33,9 @@ const HowWeWorks = () => {
   }, []);
 
   return (
-    <div className="h-screen overflow-y-scroll hide-scrollbar mb-20 bg-[#487cec] text-white">
+    <div className="h-screen overflow-y-scroll hide-scrollbar mb-20 bg-[#487cec] text-white ">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto py-16">
-        {/* Left Section (Text + Image) */}
-        <div className="sticky md:top-20 flex flex-col space-y-6 self-start">
+        <div className="sticky md:top-20 flex flex-col space-y-6 md:self-start text-center px-4 md:px-0">
           <motion.h2
             className="text-5xl font-semibold"
             initial={{ x: -200, opacity: 0 }}
@@ -58,7 +57,6 @@ const HowWeWorks = () => {
             measurable success.
           </motion.p>
 
-          {/* Image with Animation */}
           <motion.img
             src={howweworkimage}
             alt="How We Work"
@@ -70,13 +68,12 @@ const HowWeWorks = () => {
           />
         </div>
 
-        
-        <div>
+        <div className="px-4">
           {howWeWorksData.map((step) => (
             <motion.div
               key={step.id}
               id={step.id}
-              className="card relative bg-white shadow-lg rounded-lg py-6 px-6 mt-6"
+              className="card relative bg-white shadow-xl shadow-blue-900 rounded-lg py-6 px-6 mt-6"
               initial={{ opacity: 0, rotateX: -90 }}
               animate={
                 animatedCards.has(String(step.id))

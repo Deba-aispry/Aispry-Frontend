@@ -17,8 +17,8 @@ const Footer = () => {
             className="w-40 h-auto mb-4"
           />
 
-          <div className="mt-14 flex justify-between space-x-4">
-            <div>
+          <div className="mt-14 flex flex-col md:flex-row justify-between space-x-4">
+            <div className="px-4 md:px-0">
               <div className="text-sm">
                 <span className="font-semibold text-md">Hyderabad:</span>{" "}
                 2-56/2/19, 3rd Floor, Vijaya Towers, Ayyappa Society
@@ -36,26 +36,26 @@ const Footer = () => {
               </div>
             </div>
 
-            <div className="flex flex-col items-center mt-4 pl-8">
+            <div className="flex flex-col items-center my-8 md:my-0 pl-8">
               <a
                 href="https://www.linkedin.com/company/aispry/posts/?feedView=all"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <img src={linkedIn} alt="linkedin" className="w-48" />
-                <img src={linkedInLogo} alt="linkedinlogo" className="w-12 md:ml-8 mt-2" />
+                <img src={linkedInLogo} alt="linkedinlogo" className="w-12 ml-16 md:ml-8 mt-2" />
               </a>
             </div>
           </div>
         </div>
 
-        <div className="flex flex-col justify-between items-center">
-          <div>
+        <div className="flex flex-col justify-between items-center md:ml-16">
+          <div className="rounded-lg shadow-xl m-4">
             <img src={map} alt="map" className="w-full h-64" />
           </div>
-          <div className="text-sm ">
+          <div className="text-sm text-center mt-2">
             <p>AiSPRY has a global footprint in countries such as</p>
-            <span className="md:ml-14">
+            <span className="md:ml-14 font-semibold">
               India | Malaysia | USA | UK | Australia
             </span>
           </div>

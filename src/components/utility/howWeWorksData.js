@@ -23,7 +23,7 @@ export const howWeWorksData = [
     description: [
       "Joint solution development with AI experts.",
       "Proof-of-concept design and validation.",
-      "Model refinement for business needs with regular feedback",
+      "Model refinement with regular feedback",
     ],
   },
   {
@@ -39,7 +39,7 @@ export const howWeWorksData = [
     id: 5,
     title: "Evolve",
     description: [
-      "Monitor, optimize, and adapt the solution as needs evolve.",
+      "Monitor, optimize, and adapt the solution.",
       "Expand AI capabilities for sustained value.",
       "Ensure long-term alignment with business goals.",
     ],

@@ -23,13 +23,12 @@ const responsive = {
   },
 };
 
-// Variants for advanced animations
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.2, // Staggered animation for children
+      staggerChildren: 0.2,
     },
   },
 };
@@ -87,7 +86,7 @@ const CarouselComponent = () => {
           autoPlay={true}
           autoPlaySpeed={2000}
           showDots={true}
-          arrows={true}
+          // arrows={true}
           itemClass="carousel-item-padding"
         >
           {sectorCarouselData.map((card, index) => (

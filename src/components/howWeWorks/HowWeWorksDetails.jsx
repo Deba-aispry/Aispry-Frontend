@@ -21,11 +21,10 @@ const HowWeWorkDetailes = () => {
       <div className="relative z-10 max-w-6xl mx-auto flex flex-col items-center text-center mb-8">
         {/* Header Section */}
         <motion.h1
-          initial={{ opacity: 0, x: -500 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="text-5xl font-semibold my-8"
+            initial={{ opacity: 0, x: -500 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-4xl sm:text-5xl font-semibold my-8 relative z-10"
         >
           Our Approach to AI Innovation
         </motion.h1>
@@ -33,7 +32,7 @@ const HowWeWorkDetailes = () => {
           initial={{ opacity: 0, y: -100 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-lg mt-4 max-w-3xl mx-auto text-center"
+          className="text-lg max-w-3xl mx-auto text-center"
         >
           At the heart of our approach is a commitment to collaboration,
           innovation, and delivering impactful results. We start by deeply
@@ -50,7 +49,7 @@ const HowWeWorkDetailes = () => {
       </div>
 
       <div className="relative max-w-5xl mx-auto mt-16">
-        <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gray-600 hidden lg:block"></div>
+        <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-3 bg-gray-600 hidden lg:block"></div>
 
         {howWeWorksData.map((section, index) => (
           <motion.div
@@ -62,9 +61,9 @@ const HowWeWorkDetailes = () => {
               index % 2 === 0 ? "lg:flex-row-reverse" : ""
             }`}
           >
-            <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-[#ef8e38] rounded-full border-4 border-gray-900"></div>
+            <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-8 h-8 bg-[#ef8e38] rounded-full border-4 border-gray-900"></div>
 
-            <div className="w-full lg:w-1/2  p-6 rounded-lg shadow-md hover:shadow-lg border-b-2 transition-shadow">
+            <div className="w-full lg:w-1/2  p-6 rounded-lg shadow-md hover:shadow-lg border-b-2 border-gray-500 transition-shadow">
               <div className="flex items-center space-x-6">
                 <motion.div className="w-12 h-12 bg-gradient-to-r from-[#ef8e38] to-[#108dc7] rounded-full flex items-center justify-center text-xl font-bold">
                   {section.id}
@@ -80,10 +79,10 @@ const HowWeWorkDetailes = () => {
                     initial={{ opacity: 0, x: -50 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.5, delay: i * 0.2 }}
-                    className="flex items-center space-x-2"
+                    className="flex items-start space-x-2"
                   >
                     <span className="text-[#ef8e38] text-2xl">•</span>
-                    <p className="text-lg">{desc}</p>
+                    <p className="text-lg mt-1">{desc}</p>
                   </motion.li>
                 ))}
               </ul>

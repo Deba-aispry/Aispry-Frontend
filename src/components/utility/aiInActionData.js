@@ -1,15 +1,9 @@
-// import { GiBrain } from "react-icons/gi";
-// import { LuScanEye } from "react-icons/lu";
-// import { LiaLanguageSolid } from "react-icons/lia";
-// import { FaChartLine } from "react-icons/fa6";
-// import { FaCogs } from "react-icons/fa";
-
 import analytics from "../../assets/homePage/analytics.png";
 import brain from "../../assets/homePage/brain.png";
 import vision from "../../assets/homePage/vision.png";
 import language from "../../assets/homePage/language.png";
 import customAi from "../../assets/homePage/customAi.png";
-
+import genAi from "../../assets/homePage/genAi.png"
 export const aiInActionData = [
   {
     id: 1,
@@ -51,16 +45,16 @@ export const aiInActionData = [
   },
   {
     id: 5,
-    label: "Custom AI Development",
-    text: "Your vision. Our innovation. Together, we’ll create bespoke Custom AI Solutions designed specifically for your unique needs. From ideation to deployment, we craft AI systems that redefine what’s possible.",
-    keyPoint: "Specialized AI:",
+    label: "Generative AI Solutions",
+    text: "Generative AI is not just a tool; it’s a catalyst for innovation, enabling businesses to unlock new potentials and stay ahead in a competitive landscape.",
+    keyPoint: "Key Features:",
     details:
-      "Build smarter workflows, automate tedious tasks, and unlock new business potentials with tailored AI systems.",
-    image: customAi,
+      "Deliver tailored interactions that enhance engagement. Streamline processes and reduce manual effort with AI-powered automation.",
+    image: genAi,
   },
   {
     id: 6,
-    label: "Generative AI",
+    label: "Custom AI Development",
     text: "Your vision. Our innovation. Together, we’ll create bespoke Custom AI Solutions designed specifically for your unique needs. From ideation to deployment, we craft AI systems that redefine what’s possible.",
     keyPoint: "Specialized AI:",
     details:

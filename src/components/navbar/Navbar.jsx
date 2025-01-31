@@ -25,11 +25,16 @@ const Navbar = () => {
     setOpenSubmenuIndex(openSubmenuIndex === index ? null : index);
   };
 
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+    setOpenSubmenuIndex(null); // Also close submenus
+  };
+
   return (
     <nav
       className={`transition-all duration-300 ease-in-out ${
-        isSticky ? "shadow-lg " : "bg-opacity-100"
-      } bg-white sticky top-0 left-0  z-50`}
+        isSticky ? "shadow-lg" : "bg-opacity-100"
+      } bg-white sticky top-0 left-0 z-50`}
     >
       <div className="max-w-6xl mx-auto px-4 md:px-0">
         <div className="flex justify-between items-center py-6">
@@ -52,8 +57,10 @@ const Navbar = () => {
                 onMouseEnter={() => setHoveredMenu(index)}
                 onMouseLeave={() => setHoveredMenu(null)}
               >
-                <button className="text-lg font-medium px-3 py-2 rounded-md transition duration-300 transform 
-                group-hover:text-[#f48220] group-hover:scale-110">
+                <button
+                  className="text-lg font-medium px-3 py-2 rounded-md transition duration-300 transform
+                group-hover:text-[#f48220] group-hover:scale-110"
+                >
                   {item.label}
                 </button>
 
@@ -62,16 +69,34 @@ const Navbar = () => {
                 )}
               </div>
             ))}
-            <button className="text-lg font-medium px-3 py-2 rounded-md transition duration-300 transform 
-            hover:text-[#f48220] hover:scale-110" onClick={() => navigate("/resources")}>
+            <button
+              className="text-lg font-medium px-3 py-2 rounded-md transition duration-300 transform
+            hover:text-[#f48220] hover:scale-110"
+              onClick={() => {
+                navigate("/resources");
+                closeMobileMenu();
+              }}
+            >
               Resources
             </button>
-            <button className="text-lg font-medium px-3 py-2 rounded-md transition duration-300 transform 
-            hover:text-[#f48220] hover:scale-110" onClick={() => navigate("/how-we-works")}>
+            <button
+              className="text-lg font-medium px-3 py-2 rounded-md transition duration-300 transform
+            hover:text-[#f48220] hover:scale-110"
+              onClick={() => {
+                navigate("/how-we-works");
+                closeMobileMenu();
+              }}
+            >
               How We Work
             </button>
-            <button className="text-lg font-medium px-3 py-2 rounded-md transition duration-300 transform 
-            hover:text-[#f48220] hover:scale-110" onClick={() => navigate("/about-us")}>
+            <button
+              className="text-lg font-medium px-3 py-2 rounded-md transition duration-300 transform
+            hover:text-[#f48220] hover:scale-110"
+              onClick={() => {
+                navigate("/about-us");
+                closeMobileMenu();
+              }}
+            >
               About Us
             </button>
           </div>
@@ -88,38 +113,86 @@ const Navbar = () => {
                 }`}
               >
                 {isMobileMenuOpen ? (
-                  <FaTimes className="w-7 h-7 text-pink-600" />
+                  <FaTimes className="w-8 h-8 text-pink-600" />
                 ) : (
-                  <FaBars className="w-7 h-7" />
+                  <FaBars className="w-8 h-8 text-pink-700" />
                 )}
               </div>
             </button>
           </div>
         </div>
 
-        {/* Mobile Menu */}
+        {/* Mobile Menu Overlay */}
+        {isMobileMenuOpen && (
+          <div
+            className="fixed inset-0 bg-black bg-opacity-50 z-40"
+            onClick={closeMobileMenu}
+          ></div>
+        )}
+
+        {/* Mobile Menu Drawer */}
         <div
           className={`${
             isMobileMenuOpen ? "translate-x-0" : "-translate-x-full"
-          } fixed top-30 left-0 h-full w-3/4 bg-gradient-to-r from-[#108dc7] to-[#ef8e38] z-50 transition-transform duration-500 ease-in-out md:hidden`}
+          } fixed top-28 left-0 h-full w-3/4 bg-gradient-to-r from-[#108dc7] to-[#ef8e38] z-50 transition-transform duration-500 ease-in-out md:hidden shadow-lg`}
         >
           <div className="flex flex-col space-y-4 mt-10 px-6 py-4">
+        
+
             {NavMenuItems.map((item, index) => (
               <div key={index} className="relative">
                 <button
                   onClick={() => toggleSubmenu(index)}
-                  className="text-white text-sm font-medium px-3 py-2"
+                  className="text-white text-lg font-medium px-3 py-2 w-full text-left"
                 >
                   {item.label}
                 </button>
 
                 {openSubmenuIndex === index && item.submenu.length > 0 && (
-                  <div>
-                    <Submenu items={item.submenu} />
+                  <div className="ml-4 shadow-xl px-8">
+                    {item.submenu.map((subItem, subIndex) => (
+                      <Link
+                        key={subIndex}
+                        to={subItem.path}
+                        className="block text-white text-md font-medium  py-3"
+                        onClick={closeMobileMenu} 
+                      >
+                        {subItem.name}
+                      </Link>
+                    ))}
                   </div>
                 )}
               </div>
             ))}
+
+            {/* Extra Menu Items */}
+            <button
+              className="text-white text-lg font-medium px-3 py-2 text-left"
+              onClick={() => {
+                navigate("/resources");
+                closeMobileMenu();
+              }}
+            >
+              Resources
+            </button>
+            <button
+              className="text-white text-lg font-medium px-3 py-2 text-left"
+              onClick={() => {
+                navigate("/how-we-works");
+                closeMobileMenu();
+              }}
+            >
+              How We Work
+            </button>
+            <button
+              className="text-white text-lg font-medium px-3 py-2 text-left"
+              onClick={() => {
+                navigate("/about-us");
+                closeMobileMenu();
+              }}
+            >
+              About Us
+            </button>
           </div>
         </div>
       </div>

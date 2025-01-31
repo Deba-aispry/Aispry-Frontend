@@ -38,7 +38,7 @@ const Manufacturing = () => {
         onTopicClick={(topic) => setSelectedTopic(topic)}
         selectedTopic={selectedTopic}
       />
-      <div className="mt-20">
+      <div className="md:mt-10">
         {topicComponents[selectedTopic] || <p>No details available.</p>}
       </div>
       <ProjectInsights onTopicClick={(topic) => setSelectedTopic(topic)} selectedTopic={selectedTopic} />
