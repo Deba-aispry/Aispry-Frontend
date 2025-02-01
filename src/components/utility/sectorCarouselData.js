@@ -1,8 +1,8 @@
 import ecommerce from "../../assets/homePage/ecommerce.webp";
-import financial from "../../assets/homePage/financial.webp";
+// import financial from "../../assets/homePage/financial.webp";
 import manufacturing from "../../assets/homePage/manufacturing.webp";
-import fmcgImage from "../../assets/homePage/fmcgImage.webp";
-import esgImage from "../../assets/homePage/esgImage.webp";
+// import fmcgImage from "../../assets/homePage/fmcgImage.webp";
+// import esgImage from "../../assets/homePage/esgImage.webp";
 import healthcare from "../../assets/homePage/medical.webp";
 import energy from "../../assets/homePage/energy.webp";
 export const sectorCarouselData = [
@@ -64,36 +64,36 @@ export const sectorCarouselData = [
       },
     ],
   },
-  {
-    id: 3,
-    title: "FMCG & Food and Beverage",
-    description:
-      "Reimagine supply chains, enhance safety, and optimize inventory with AI tailored for the fast-moving consumer goods and food sectors.",
-    image: fmcgImage,
-    path: "/industry/fmcg",
-    highlights: [
-      {
-        title: "Dynamic Route Optimization",
-        detail:
-          "Adaptive algorithms to adjust routes in real-time based on traffic, weather, and demand.",
-      },
-      {
-        title: "Safety Innovations",
-        detail:
-          "Computer vision to monitor loading zones and prevent forklift hazards.",
-      },
-      {
-        title: "Predictive Fleet Maintenance",
-        detail:
-          "Minimize downtime with AI models that forecast vehicle breakdowns.",
-      },
-      {
-        title: "Digital Twins for Logistics",
-        detail:
-          "Simulating supply chain scenarios to test and improve operations.",
-      },
-    ],
-  },
+  // {
+  //   id: 3,
+  //   title: "FMCG & Food and Beverage",
+  //   description:
+  //     "Reimagine supply chains, enhance safety, and optimize inventory with AI tailored for the fast-moving consumer goods and food sectors.",
+  //   image: fmcgImage,
+  //   path: "/industry/fmcg",
+  //   highlights: [
+  //     {
+  //       title: "Dynamic Route Optimization",
+  //       detail:
+  //         "Adaptive algorithms to adjust routes in real-time based on traffic, weather, and demand.",
+  //     },
+  //     {
+  //       title: "Safety Innovations",
+  //       detail:
+  //         "Computer vision to monitor loading zones and prevent forklift hazards.",
+  //     },
+  //     {
+  //       title: "Predictive Fleet Maintenance",
+  //       detail:
+  //         "Minimize downtime with AI models that forecast vehicle breakdowns.",
+  //     },
+  //     {
+  //       title: "Digital Twins for Logistics",
+  //       detail:
+  //         "Simulating supply chain scenarios to test and improve operations.",
+  //     },
+  //   ],
+  // },
   {
     id: 4,
     title: "Retail & E-commerce",
@@ -123,60 +123,60 @@ export const sectorCarouselData = [
       },
     ],
   },
-  {
-    id: 5,
-    title: "Financial Services",
-    description:
-      "Make smarter, safer decisions with AI in finance. Automate processes, detect fraud, and deliver personalized financial solutions for your customers.",
-    image: financial,
-    path: "/industry/financial",
-    highlights: [
-      {
-        title: "Fraud detection and risk management",
-        detail: "Early and accurate identification of fraudulent activities.",
-      },
-      {
-        title: "Customer Behavior Analytics",
-        detail: "Tailored services based on customer data analysis.",
-      },
-      {
-        title: "Process Automation",
-        detail: "Streamlining financial operations for improved efficiency.",
-      },
-      {
-        title: "Procurement Insights",
-        detail: "Identify cost-saving opportunities in procurement.",
-      },
-    ],
-  },
-  {
-    id: 6,
-    title: "ESG",
-    description:
-      "Monitor, measure, and act for a better tomorrow. Use AI to track environmental impact, enhance sustainability, and ensure compliance with ESG goals.",
-    image: esgImage,
-    path: "/industry/esg",
-    highlights: [
-      {
-        title: "AI for Carbon Neutrality",
-        detail:
-          "Advanced monitoring and forecasting tools to track and minimize emissions.",
-      },
-      {
-        title: "Sustainable Supply Chains",
-        detail:
-          "AI to assess supplier practices and recommend greener alternatives.",
-      },
-      {
-        title: "Compliance Automation",
-        detail: "Intelligent systems for ESG regulation adherence.",
-      },
-      {
-        title: "AI-Powered Risk Assessment",
-        detail: "Identifying and mitigating environmental risks in real-time.",
-      },
-    ],
-  },
+  // {
+  //   id: 5,
+  //   title: "Financial Services",
+  //   description:
+  //     "Make smarter, safer decisions with AI in finance. Automate processes, detect fraud, and deliver personalized financial solutions for your customers.",
+  //   image: financial,
+  //   path: "/industry/financial",
+  //   highlights: [
+  //     {
+  //       title: "Fraud detection and risk management",
+  //       detail: "Early and accurate identification of fraudulent activities.",
+  //     },
+  //     {
+  //       title: "Customer Behavior Analytics",
+  //       detail: "Tailored services based on customer data analysis.",
+  //     },
+  //     {
+  //       title: "Process Automation",
+  //       detail: "Streamlining financial operations for improved efficiency.",
+  //     },
+  //     {
+  //       title: "Procurement Insights",
+  //       detail: "Identify cost-saving opportunities in procurement.",
+  //     },
+  //   ],
+  // },
+  // {
+  //   id: 6,
+  //   title: "ESG",
+  //   description:
+  //     "Monitor, measure, and act for a better tomorrow. Use AI to track environmental impact, enhance sustainability, and ensure compliance with ESG goals.",
+  //   image: esgImage,
+  //   path: "/industry/esg",
+  //   highlights: [
+  //     {
+  //       title: "AI for Carbon Neutrality",
+  //       detail:
+  //         "Advanced monitoring and forecasting tools to track and minimize emissions.",
+  //     },
+  //     {
+  //       title: "Sustainable Supply Chains",
+  //       detail:
+  //         "AI to assess supplier practices and recommend greener alternatives.",
+  //     },
+  //     {
+  //       title: "Compliance Automation",
+  //       detail: "Intelligent systems for ESG regulation adherence.",
+  //     },
+  //     {
+  //       title: "AI-Powered Risk Assessment",
+  //       detail: "Identifying and mitigating environmental risks in real-time.",
+  //     },
+  //   ],
+  // },
   {
     id: 7,
     title: "Manufacturing & Industrial",

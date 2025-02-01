@@ -2,7 +2,7 @@ import React from "react";
 
 const Achievements = () => {
   return (
-    <div className="flex flex-col md:flex-row items-start text-white max-w-6xl mx-auto border-b-2 border-gray-800 pb-8">
+    <div className="flex flex-col md:flex-row items-start text-white max-w-6xl mx-auto border-b-2 border-gray-800 pb-8 mt-12">
       {/* Heading Section */}
       <div className="md:w-1/4 m-auto">
         <h2 className="text-3xl font-semibold">Our Achievements</h2>

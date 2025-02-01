@@ -1,21 +1,16 @@
 import React from "react";
-// import bgImage from "../../assets/homePage/bgImage.webp";
 import { aiInActionData } from "../utility/aiInActionData";
 
 const AiInActions = () => {
   return (
     <div className="relative min-h-screen flex flex-col items-center justify-start overflow-hidden">
-      {/* <img
-        src={bgImage}
-        alt="Background"
-        className="absolute inset-0 w-full h-full object-cover z-0"
-      /> */}
+    
 
       <div className="absolute inset-0 bg-[#487cec] bg-opacity-100 z-10"></div>
 
       <div className="relative z-20 text-center mt-12 header-animation">
         <h1 className="text-5xl font-semibold  text-white mb-4">AI Solutions</h1>
-        <p className="text-white text-xl font-semibold max-w-3xl mx-auto">
+        <p className="text-white text-xl font-semibold max-w-3xl mx-auto px-4">
           Redefine the way you do business with our cutting-edge AI Solutions.
           From revolutionizing customer experiences to unlocking the power of
           predictive insights, we help you innovate and lead in a competitive

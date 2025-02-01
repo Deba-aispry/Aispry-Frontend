@@ -41,7 +41,7 @@ const ProjectDetailsPage = ({
   return (
     <div className="container mx-auto px-4">
       <motion.div
-        className="fixed top-28 left-0 h-2 bg-gradient-to-r from-blue-600 to-orange-400 z-50"
+        className="fixed top-28 left-0 h-2 bg-gradient-to-r from-blue-600 to-orange-400 z-40"
         style={{
           width: `${scrollProgress}%`,
         }}

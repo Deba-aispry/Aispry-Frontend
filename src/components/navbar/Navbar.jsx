@@ -122,7 +122,7 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* Mobile Menu Overlay */}
+      
         {isMobileMenuOpen && (
           <div
             className="fixed inset-0 bg-black bg-opacity-50 z-40"
@@ -134,7 +134,7 @@ const Navbar = () => {
         <div
           className={`${
             isMobileMenuOpen ? "translate-x-0" : "-translate-x-full"
-          } fixed top-28 left-0 h-full w-3/4 bg-gradient-to-r from-[#108dc7] to-[#ef8e38] z-50 transition-transform duration-500 ease-in-out md:hidden shadow-lg`}
+          } fixed top-28 left-0 h-full w-3/4 bg-gray-100 z-50 rounded-r-lg transition-transform duration-500 ease-in-out md:hidden shadow-lg`}
         >
           <div className="flex flex-col space-y-4 mt-10 px-6 py-4">
         
@@ -143,18 +143,18 @@ const Navbar = () => {
               <div key={index} className="relative">
                 <button
                   onClick={() => toggleSubmenu(index)}
-                  className="text-white text-lg font-medium px-3 py-2 w-full text-left"
+                  className=" text-xl font-semibold px-3 py-2 w-full text-left"
                 >
                   {item.label}
                 </button>
 
                 {openSubmenuIndex === index && item.submenu.length > 0 && (
-                  <div className="ml-4 shadow-xl px-8">
+                  <div className="ml-2 shadow-2xl px-8 py-4 rounded-xl">
                     {item.submenu.map((subItem, subIndex) => (
                       <Link
                         key={subIndex}
                         to={subItem.path}
-                        className="block text-white text-md font-medium  py-3"
+                        className="block text-lg font-semibold  py-3"
                         onClick={closeMobileMenu} 
                       >
                         {subItem.name}
@@ -167,7 +167,7 @@ const Navbar = () => {
 
             {/* Extra Menu Items */}
             <button
-              className="text-white text-lg font-medium px-3 py-2 text-left"
+              className="text-xl font-semibold px-3 py-2 text-left"
               onClick={() => {
                 navigate("/resources");
                 closeMobileMenu();
@@ -176,7 +176,7 @@ const Navbar = () => {
               Resources
             </button>
             <button
-              className="text-white text-lg font-medium px-3 py-2 text-left"
+              className="text-xl font-semibold px-3 py-2 text-left"
               onClick={() => {
                 navigate("/how-we-works");
                 closeMobileMenu();
@@ -185,7 +185,7 @@ const Navbar = () => {
               How We Work
             </button>
             <button
-              className="text-white text-lg font-medium px-3 py-2 text-left"
+              className="text-xl font-semibold px-3 py-2 text-left"
               onClick={() => {
                 navigate("/about-us");
                 closeMobileMenu();

@@ -71,7 +71,7 @@ const CarouselComponent = () => {
           variants={paragraphVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 1 }}
+          viewport={{ once: true, amount: 0.6 }}
         >
           Empowering businesses across industries with cutting-edge AI solutions
           tailored to ensure operational excellence, safety, sustainability, and
@@ -86,7 +86,7 @@ const CarouselComponent = () => {
           autoPlay={true}
           autoPlaySpeed={2000}
           showDots={true}
-          // arrows={true}
+          arrows={false}
           itemClass="carousel-item-padding"
         >
           {sectorCarouselData.map((card, index) => (

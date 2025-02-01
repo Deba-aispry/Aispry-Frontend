@@ -6,7 +6,6 @@ import { accordionData } from "../utility/accordianData";
 
 const ResourceIndex = () => {
   const [activeIndex, setActiveIndex] = useState(null);
- 
 
   return (
     <div className=" text-white p-8">
@@ -25,13 +24,15 @@ const ResourceIndex = () => {
             >
               <AccordionItem
                 header={
-                  <div className="flex items-center justify-between text-lg font-semibold text-white py-2 ">
-                    {activeIndex === index ? (
-                      <IoArrowUpSharp className="text-xl" />
-                    ) : (
-                      <IoArrowDownSharp className="text-xl" />
-                    )}
-                    <h3 className="ml-4 hover:text-[#ef8e38]">{item.header}</h3>
+                  <div className="flex items-start justify-between text-lg font-semibold text-white py-2 ">
+                    <span>
+                      {activeIndex === index ? (
+                        <IoArrowUpSharp className="text-xl mt-1" />
+                      ) : (
+                        <IoArrowDownSharp className="text-xl mt-1" />
+                      )}
+                    </span>
+                    <h3 className="ml-4 hover:text-[#ef8e38] text-start ">{item.header}</h3>
                   </div>
                 }
                 className="rounded-lg overflow-hidden shadow-md"

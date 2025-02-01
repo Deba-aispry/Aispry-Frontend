@@ -36,7 +36,7 @@ const HealthCare = () => {
         onTopicClick={(topic) => setSelectedTopic(topic)}
         selectedTopic={selectedTopic}
       />
-      <div className="mt-20">
+      <div className="mt-10">
         {topicComponents[selectedTopic] || <p>No details available.</p>}
       </div>
       <ProjectInsights
