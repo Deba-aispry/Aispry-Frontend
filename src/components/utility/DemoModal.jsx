@@ -4,7 +4,7 @@ import { AiOutlineClose } from "react-icons/ai";
 const DemoModal = ({ setIsModalOpen }) => {
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-opacity-50">
-      <div className="bg-[#023e8a] w-[90%] max-w-xl rounded-lg shadow-lg overflow-hidden">
+      <div className="bg-[#023e8a] w-[90%] max-w-md rounded-lg shadow-lg overflow-hidden">
         {/* Header Section */}
         <div className="relative p-6 text-white">
           <button
@@ -17,7 +17,7 @@ const DemoModal = ({ setIsModalOpen }) => {
             <h2 className="text-3xl font-semibold">
               Claim Your Free AI Consultation!
             </h2>
-            <p className="mt-2 text-lg">
+            <p className="mt-2 ">
               Our expert team is here to guide you through the possibilities and
               tailor solutions that fit your unique needs.
             </p>
@@ -25,8 +25,8 @@ const DemoModal = ({ setIsModalOpen }) => {
         </div>
 
         {/* Form Section */}
-        <div className="bg-[#023e8a] p-6 space-y-4">
-          <form className="space-y-6">
+        <div className="bg-[#023e8a] px-4 pb-4">
+          <form className="space-y-3">
             {/* Name */}
             <div>
               <input
