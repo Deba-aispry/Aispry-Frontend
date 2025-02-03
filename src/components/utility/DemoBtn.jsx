@@ -17,7 +17,7 @@ const SupportButton = () => {
         onMouseLeave={() => setIsHovered(false)}
         onClick={() => setIsModalOpen(true)}
       >
-        <div className="flex items-center justify-center w-12 h-12 rounded-full">
+        <div className="flex items-center justify-center w-9 h-9 rounded-full">
           <IoChatboxEllipsesOutline className="text-2xl ml-1" />
         </div>
         <div
@@ -25,7 +25,9 @@ const SupportButton = () => {
             isHovered ? "visible opacity-100" : "invisible opacity-0"
           } transition-opacity duration-300`}
         >
-          <span className="font-semibold text-md">Request a Demo</span>
+          <span className="font-semibold text-md">
+            Free AI Consultation!
+          </span>
         </div>
       </div>
 

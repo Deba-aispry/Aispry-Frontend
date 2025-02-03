@@ -22,7 +22,8 @@ import Transportation from "./components/industryApplications/transportation/Tra
 import HowWeWorksDetails from "./components/howWeWorks/HowWeWorksDetails";
 
 import ScrollToTopButton from "./components/utility/ScrollToTopBtn";
-// import DemoBtn from "./components/utility/DemoBtn";
+import FreeAIDemoButton from "./components/utility/FreeAIDemo";
+import DemoBtn from "./components/utility/DemoBtn";
 import Footer from "./components/footer/Footer";
 import { useEffect } from "react";
 
@@ -58,8 +59,9 @@ function App() {
           <Route path="/resources" element={<ResourceIndex />} />
         </Routes>
         <Footer />
+        <FreeAIDemoButton />
         <ScrollToTopButton />
-        {/* <DemoBtn /> */}
+        <DemoBtn />
       </div>
     </Router>
   );

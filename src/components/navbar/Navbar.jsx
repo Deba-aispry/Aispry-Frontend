@@ -7,6 +7,7 @@ import { NavMenuItems } from "../utility/NavMenuItems";
 import footerlogo from "../../assets/homePage/footerlogo.webp";
 import { Link, useNavigate } from "react-router-dom";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
+import FreeAIDemoButton from "../utility/FreeAIDemo";
 
 const Navbar = () => {
   const [hoveredMenu, setHoveredMenu] = useState(null);
@@ -30,7 +31,7 @@ const Navbar = () => {
 
   const closeMobileMenu = () => {
     setIsMobileMenuOpen(false);
-    setOpenSubmenuIndex(null); // Also close submenus
+    setOpenSubmenuIndex(null); 
   };
 
   return (
@@ -50,9 +51,7 @@ const Navbar = () => {
               />
             </Link>
           </div>
-
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-4 items-center relative">
+          <div className="hidden md:flex space-x-3 items-center relative">
             {NavMenuItems.map((item, index) => (
               <div
                 key={index}
@@ -102,6 +101,7 @@ const Navbar = () => {
             >
               About Us
             </button> */}
+            <FreeAIDemoButton />
           </div>
 
           {/* Mobile Hamburger Menu */}

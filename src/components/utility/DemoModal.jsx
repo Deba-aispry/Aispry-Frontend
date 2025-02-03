@@ -3,23 +3,29 @@ import { AiOutlineClose } from "react-icons/ai";
 
 const DemoModal = ({ setIsModalOpen }) => {
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
-      <div className="bg-white w-[90%] max-w-lg rounded-lg shadow-lg overflow-hidden">
+    <div className="fixed inset-0 flex items-center justify-center bg-opacity-50">
+      <div className="bg-[#023e8a] w-[90%] max-w-xl rounded-lg shadow-lg overflow-hidden">
         {/* Header Section */}
-        <div className="relative bg-gradient-to-r from-[#e28743] to-[#108dc7] p-6 text-white">
-          <div className="flex items-center justify-between">
-            <h2 className="text-xl font-semibold">Request a Demo</h2>
-            <button
-              className="text-white hover:text-red-400 text-2xl"
-              onClick={() => setIsModalOpen(false)}
-            >
-              <AiOutlineClose />
-            </button>
+        <div className="relative p-6 text-white">
+          <button
+            className="absolute top-4 right-4 text-white hover:text-red-400 text-2xl"
+            onClick={() => setIsModalOpen(false)}
+          >
+            <AiOutlineClose />
+          </button>
+          <div className="text-center mt-4">
+            <h2 className="text-3xl font-semibold">
+              Claim Your Free AI Consultation!
+            </h2>
+            <p className="mt-2 text-lg">
+              Our expert team is here to guide you through the possibilities and
+              tailor solutions that fit your unique needs.
+            </p>
           </div>
         </div>
 
         {/* Form Section */}
-        <div className="p-6 space-y-4">
+        <div className="bg-[#023e8a] p-6 space-y-4">
           <form className="space-y-6">
             {/* Name */}
             <div>
@@ -27,7 +33,7 @@ const DemoModal = ({ setIsModalOpen }) => {
                 type="text"
                 name="name"
                 className="w-full border border-gray-300 rounded px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                placeholder="Name"
+                placeholder="Name*"
               />
             </div>
 
@@ -47,7 +53,7 @@ const DemoModal = ({ setIsModalOpen }) => {
                 type="email"
                 name="email"
                 className="w-full border border-gray-300 rounded px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                placeholder="Email ID"
+                placeholder="Email ID*"
               />
             </div>
 
@@ -57,7 +63,7 @@ const DemoModal = ({ setIsModalOpen }) => {
                 type="tel"
                 name="phone"
                 className="w-full border border-gray-300 rounded px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                placeholder="Contact No."
+                placeholder="Contact No.*"
               />
             </div>
 
@@ -70,6 +76,10 @@ const DemoModal = ({ setIsModalOpen }) => {
                 rows="1"
               ></textarea>
             </div>
+            <p className="text-white">
+              <span className="text-lg font-semibold"> No Obligation: </span>
+              This consultation is completely free—no strings attached!
+            </p>
 
             {/* Submit Button */}
             <div className="w-full">
