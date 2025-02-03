@@ -19,7 +19,7 @@ const DemoModal = ({ setIsModalOpen }) => {
             </h2>
             <p className="mt-2 ">
               Our expert team is here to guide you through the possibilities and
-              tailor solutions that fit your unique needs.
+              tailor solutions that fit your needs.
             </p>
           </div>
         </div>
@@ -73,7 +73,7 @@ const DemoModal = ({ setIsModalOpen }) => {
                 name="message"
                 className="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 placeholder="Message"
-                rows="1"
+                rows="2"
               ></textarea>
             </div>
             <p className="text-white">
