@@ -32,7 +32,7 @@ const DemoModal = ({ setIsModalOpen }) => {
               <input
                 type="text"
                 name="name"
-                className="w-full border border-gray-300 rounded px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 placeholder="Name*"
               />
             </div>
@@ -42,7 +42,7 @@ const DemoModal = ({ setIsModalOpen }) => {
               <input
                 type="text"
                 name="lastName"
-                className="w-full border border-gray-300 rounded px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 placeholder="Company/Institute"
               />
             </div>
@@ -52,7 +52,7 @@ const DemoModal = ({ setIsModalOpen }) => {
               <input
                 type="email"
                 name="email"
-                className="w-full border border-gray-300 rounded px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 placeholder="Email ID*"
               />
             </div>
@@ -62,7 +62,7 @@ const DemoModal = ({ setIsModalOpen }) => {
               <input
                 type="tel"
                 name="phone"
-                className="w-full border border-gray-300 rounded px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 placeholder="Contact No.*"
               />
             </div>
@@ -71,13 +71,13 @@ const DemoModal = ({ setIsModalOpen }) => {
             <div>
               <textarea
                 name="message"
-                className="w-full border border-gray-300 rounded px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 placeholder="Message"
                 rows="1"
               ></textarea>
             </div>
             <p className="text-white">
-              <span className="text-lg font-semibold"> No Obligation: </span>
+              <span className="text-lg font-semibold text-[#ef8e38]"> No Obligation: </span>
               This consultation is completely free—no strings attached!
             </p>
 
