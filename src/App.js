@@ -22,7 +22,7 @@ import Transportation from "./components/industryApplications/transportation/Tra
 import HowWeWorksDetails from "./components/howWeWorks/HowWeWorksDetails";
 
 import ScrollToTopButton from "./components/utility/ScrollToTopBtn";
-import DemoBtn from "./components/utility/DemoBtn";
+// import DemoBtn from "./components/utility/DemoBtn";
 import Footer from "./components/footer/Footer";
 import { useEffect } from "react";
 
@@ -59,7 +59,7 @@ function App() {
         </Routes>
         <Footer />
         <ScrollToTopButton />
-        <DemoBtn />
+        {/* <DemoBtn /> */}
       </div>
     </Router>
   );
