@@ -61,11 +61,11 @@ const HowWeWorks = () => {
         </div>
 
         {/* Right Section */}
-        <div className="lg:col-span-5 col-span-1 lg:max-h-[75vh] lg:overflow-y-auto my-auto hide-scrollbar  ">
+        <div className="lg:col-span-5 col-span-1 lg:max-h-[75vh] lg:overflow-y-auto my-auto hide-scrollbar pb-8 ">
           {howWeWorksData.map((step, index) => (
             <motion.div
               key={step.id}
-              className="card relative bg-white shadow-xl shadow-blue-900 rounded-lg py-6 px-6 mt-12"
+              className="card relative bg-white shadow-lg shadow-blue-900 rounded-lg py-6 px-6 mt-12"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: false, amount: 0.3 }}

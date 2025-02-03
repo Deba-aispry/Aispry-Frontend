@@ -1,10 +1,13 @@
 import ecommerce from "../../assets/homePage/ecommerce.webp";
-// import financial from "../../assets/homePage/financial.webp";
 import manufacturing from "../../assets/homePage/manufacturing.webp";
-// import fmcgImage from "../../assets/homePage/fmcgImage.webp";
-// import esgImage from "../../assets/homePage/esgImage.webp";
 import healthcare from "../../assets/homePage/medical.webp";
 import energy from "../../assets/homePage/energy.webp";
+import volvo from "../../assets/projectImage/volvo.png";
+
+// import financial from "../../assets/homePage/financial.webp";
+// import fmcgImage from "../../assets/homePage/fmcgImage.webp";
+// import esgImage from "../../assets/homePage/esgImage.webp";
+
 export const sectorCarouselData = [
   {
     id: 1,
@@ -95,7 +98,7 @@ export const sectorCarouselData = [
   //   ],
   // },
   {
-    id: 4,
+    id: 3,
     title: "Retail & E-commerce",
     description:
       "Deliver personalized experiences and smarter operations. Elevate your retail and e-commerce business with AI that predicts, analyzes, and adapts.",
@@ -178,7 +181,7 @@ export const sectorCarouselData = [
   //   ],
   // },
   {
-    id: 7,
+    id: 4,
     title: "Manufacturing & Industrial",
     description:
       "Pioneering Industry 4.0 with transformative solutions that enhance productivity, minimize downtime, and ensure safety. From smart factories to streamlined operations, we power the next industrial revolution.",
@@ -207,5 +210,13 @@ export const sectorCarouselData = [
         detail: "Process optimization to reduce energy consumption.",
       },
     ],
+  },
+  {
+    id: 5,
+    title: "Transportation & Logistics",
+    description:
+      "Transforming logistics and transportation with solutions that improve efficiency, reduce delays, and enhance safety, driving faster and more reliable delivery across the supply chain.",
+    image: volvo,
+    path: "/industry/transportation",
   },
 ];

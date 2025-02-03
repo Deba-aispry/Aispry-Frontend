@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
+import { FaTimes } from "react-icons/fa";
+import { CgMenuLeft } from "react-icons/cg";
+
 import Submenu from "./Submenu";
 import { NavMenuItems } from "../utility/NavMenuItems";
 import footerlogo from "../../assets/homePage/footerlogo.webp";
 import { Link, useNavigate } from "react-router-dom";
+import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 
 const Navbar = () => {
   const [hoveredMenu, setHoveredMenu] = useState(null);
@@ -89,7 +92,7 @@ const Navbar = () => {
             >
               How We Work
             </button>
-            <button
+            {/* <button
               className="text-lg font-medium px-3 py-2 rounded-md transition duration-300 transform
             hover:text-[#f48220] hover:scale-110"
               onClick={() => {
@@ -98,7 +101,7 @@ const Navbar = () => {
               }}
             >
               About Us
-            </button>
+            </button> */}
           </div>
 
           {/* Mobile Hamburger Menu */}
@@ -113,16 +116,15 @@ const Navbar = () => {
                 }`}
               >
                 {isMobileMenuOpen ? (
-                  <FaTimes className="w-8 h-8 text-pink-600" />
+                  <FaTimes className="size-8 text-pink-600" />
                 ) : (
-                  <FaBars className="w-8 h-8 text-pink-700" />
+                  <CgMenuLeft className="size-10 text-pink-700" />
                 )}
               </div>
             </button>
           </div>
         </div>
 
-      
         {isMobileMenuOpen && (
           <div
             className="fixed inset-0 bg-black bg-opacity-50 z-40"
@@ -137,16 +139,17 @@ const Navbar = () => {
           } fixed top-28 left-0 h-full w-3/4 bg-gray-100 z-50 rounded-r-lg transition-transform duration-500 ease-in-out md:hidden shadow-lg`}
         >
           <div className="flex flex-col space-y-4 mt-10 px-6 py-4">
-        
-
             {NavMenuItems.map((item, index) => (
               <div key={index} className="relative">
-                <button
-                  onClick={() => toggleSubmenu(index)}
-                  className=" text-xl font-semibold px-3 py-2 w-full text-left"
-                >
-                  {item.label}
-                </button>
+                <div className="flex  items-center justify-between">
+                  <button
+                    onClick={() => toggleSubmenu(index)}
+                    className=" text-xl font-semibold px-3 py-2 w-full text-left"
+                  >
+                    <span>{item.label}</span>
+                  </button>
+                  <MdOutlineKeyboardArrowDown className="text-2xl size-8" />
+                </div>
 
                 {openSubmenuIndex === index && item.submenu.length > 0 && (
                   <div className="ml-2 shadow-2xl px-8 py-4 rounded-xl">
@@ -155,7 +158,7 @@ const Navbar = () => {
                         key={subIndex}
                         to={subItem.path}
                         className="block text-lg font-semibold  py-3"
-                        onClick={closeMobileMenu} 
+                        onClick={closeMobileMenu}
                       >
                         {subItem.name}
                       </Link>
@@ -184,7 +187,7 @@ const Navbar = () => {
             >
               How We Work
             </button>
-            <button
+            {/* <button
               className="text-xl font-semibold px-3 py-2 text-left"
               onClick={() => {
                 navigate("/about-us");
@@ -192,7 +195,7 @@ const Navbar = () => {
               }}
             >
               About Us
-            </button>
+            </button> */}
           </div>
         </div>
       </div>
